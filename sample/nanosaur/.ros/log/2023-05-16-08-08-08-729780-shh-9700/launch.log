@@ -1,0 +1,31 @@
+1684224488.7303991 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-16-08-08-08-729780-shh-9700
+1684224488.7305043 [INFO] [launch]: Default logging verbosity is set to INFO
+1684224488.9403813 [INFO] [robot_state_publisher-1]: process started with pid [9702]
+1684224488.9646471 [robot_state_publisher-1] [INFO] [1684224488.964204998] [robot_state_publisher]: got segment NVIDIA_jetson
+1684224488.9649005 [robot_state_publisher-1] [INFO] [1684224488.964287759] [robot_state_publisher]: got segment base_front
+1684224488.9650443 [robot_state_publisher-1] [INFO] [1684224488.964293600] [robot_state_publisher]: got segment base_link
+1684224488.9652009 [robot_state_publisher-1] [INFO] [1684224488.964297387] [robot_state_publisher]: got segment base_rear
+1684224488.9653404 [robot_state_publisher-1] [INFO] [1684224488.964301144] [robot_state_publisher]: got segment board_expansion
+1684224488.9654911 [robot_state_publisher-1] [INFO] [1684224488.964305001] [robot_state_publisher]: got segment camera_board
+1684224488.9656260 [robot_state_publisher-1] [INFO] [1684224488.964308908] [robot_state_publisher]: got segment camera_optical_frame
+1684224488.9657571 [robot_state_publisher-1] [INFO] [1684224488.964312695] [robot_state_publisher]: got segment cover
+1684224488.9658842 [robot_state_publisher-1] [INFO] [1684224488.964316692] [robot_state_publisher]: got segment display_left
+1684224488.9660485 [robot_state_publisher-1] [INFO] [1684224488.964320349] [robot_state_publisher]: got segment display_right
+1684224488.9661968 [robot_state_publisher-1] [INFO] [1684224488.964323946] [robot_state_publisher]: got segment flap_bottom
+1684224488.9663346 [robot_state_publisher-1] [INFO] [1684224488.964327452] [robot_state_publisher]: got segment flap_top
+1684224488.9664824 [robot_state_publisher-1] [INFO] [1684224488.964331018] [robot_state_publisher]: got segment motor_board
+1684224488.9670236 [robot_state_publisher-1] [INFO] [1684224488.964334555] [robot_state_publisher]: got segment motor_left
+1684224488.9672029 [robot_state_publisher-1] [INFO] [1684224488.964339294] [robot_state_publisher]: got segment motor_right
+1684224488.9673400 [robot_state_publisher-1] [INFO] [1684224488.964343010] [robot_state_publisher]: got segment pb_holder
+1684224488.9674792 [robot_state_publisher-1] [INFO] [1684224488.964346697] [robot_state_publisher]: got segment power_bank
+1684224488.9676168 [robot_state_publisher-1] [INFO] [1684224488.964350254] [robot_state_publisher]: got segment slider_left
+1684224488.9677527 [robot_state_publisher-1] [INFO] [1684224488.964353800] [robot_state_publisher]: got segment slider_right
+1684224488.9678869 [robot_state_publisher-1] [INFO] [1684224488.964357427] [robot_state_publisher]: got segment sprocket_left
+1684224488.9680195 [robot_state_publisher-1] [INFO] [1684224488.964361114] [robot_state_publisher]: got segment sprocket_right
+1684224488.9681542 [robot_state_publisher-1] [INFO] [1684224488.964364680] [robot_state_publisher]: got segment track_left
+1684224488.9683058 [robot_state_publisher-1] [INFO] [1684224488.964368217] [robot_state_publisher]: got segment track_right
+1684224488.9684651 [robot_state_publisher-1] [INFO] [1684224488.964371763] [robot_state_publisher]: got segment wheel_left
+1684224488.9686317 [robot_state_publisher-1] [INFO] [1684224488.964375309] [robot_state_publisher]: got segment wheel_right
+1684224496.9999504 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1684224497.0016000 [robot_state_publisher-1] [INFO] [1684224496.999711447] [rclcpp]: signal_handler(signum=2)
+1684224497.1349876 [ERROR] [robot_state_publisher-1]: process has died [pid 9702, exit code -11, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args --params-file /tmp/launch_params_o6rlf3ec'].

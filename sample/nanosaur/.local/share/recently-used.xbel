@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/user/nanosaur/src/nanosaur_simulations/nanosaur_gazebo/launch/gazebo.launch.py" added="2023-05-20T10:16:24.457400Z" modified="2023-05-20T15:37:17.887933Z" visited="2023-05-20T10:16:24.457401Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-05-20T15:37:17.887929Z" count="29"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/user/nanosaur/src/ros2_camera_receiver/ros2_camera_receiver/camera_image_subscriber.py" added="2023-05-20T15:24:49.777120Z" modified="2023-05-20T16:00:34.497794Z" visited="2023-05-20T15:24:49.777123Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-05-20T16:00:34.497790Z" count="19"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/user/nanosaur/src/ros2_camera_receiver/package.xml" added="2023-05-20T15:25:03.543451Z" modified="2023-05-20T15:33:56.631118Z" visited="2023-05-20T15:25:03.543454Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/xml"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-05-20T15:33:56.631110Z" count="7"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/user/nanosaur/src/ros2_camera_receiver/setup.py" added="2023-05-20T15:25:44.756191Z" modified="2023-05-20T15:27:52.711631Z" visited="2023-05-20T15:25:44.756193Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:groups>
+          <bookmark:group>gedit</bookmark:group>
+        </bookmark:groups>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2023-05-20T15:27:52.711626Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

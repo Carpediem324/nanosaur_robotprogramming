@@ -1,0 +1,7 @@
+[INFO] [1684593448.936200867] [nanosaur.spawn_entity]: Spawn Entity started
+[INFO] [1684593448.936507800] [nanosaur.spawn_entity]: Loading entity published on topic robot_description
+[INFO] [1684593448.942015550] [nanosaur.spawn_entity]: Waiting for entity xml on robot_description
+[INFO] [1684593448.955003661] [nanosaur.spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[INFO] [1684593448.955541404] [nanosaur.spawn_entity]: Waiting for service /spawn_entity
+[INFO] [1684593449.719876223] [nanosaur.spawn_entity]: Calling service /spawn_entity
+[INFO] [1684593449.917326688] [nanosaur.spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [nanosaur]

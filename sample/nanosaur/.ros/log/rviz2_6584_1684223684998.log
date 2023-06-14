@@ -1,0 +1,36 @@
+[INFO] [1684223685.193274616] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [1684223685.193577713] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[INFO] [1684223685.207838348] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [1684223696.626125631] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [1684223703.122148879] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [1684223703.436420683] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.467 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.468199578] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.490 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.500105936] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.515 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.532035698] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.539 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.564256053] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.561 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.596077118] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.584 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.627412510] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.610 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.659190213] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.631 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.691636487] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.651 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.723273823] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.674 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.755434053] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.695 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.788293233] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.737 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.819718926] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.759 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.851720024] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.801 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.883363051] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.823 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.915634182] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.866 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.947549266] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.888 for reason 'discarding message because the queue is full'
+[INFO] [1684223703.979398926] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.928 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.011656351] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.967 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.043396923] [rviz2]: Message Filter dropping message: frame 'base_link' at time 16.987 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.075637617] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.009 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.107935819] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.050 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.140032319] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.072 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.171760246] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.115 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.203865523] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.158 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.235340149] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.179 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.267795240] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.220 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.299666251] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.239 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.331897325] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.258 for reason 'discarding message because the queue is full'
+[INFO] [1684223704.363623651] [rviz2]: Message Filter dropping message: frame 'base_link' at time 17.302 for reason 'discarding message because the queue is full'
+[INFO] [1684223709.467413605] [rclcpp]: signal_handler(signum=2)

@@ -1,0 +1,45 @@
+1683355799.3569155 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-06-06-49-59-356463-stmoon-XPS-9320-13156
+1683355799.3571801 [INFO] [launch]: Default logging verbosity is set to INFO
+1683355799.9389112 [INFO] [gzserver-1]: process started with pid [13158]
+1683355799.9390755 [INFO] [gzclient-2]: process started with pid [13160]
+1683355799.9391613 [INFO] [robot_state_publisher-3]: process started with pid [13162]
+1683355799.9392309 [INFO] [spawn_entity.py-4]: process started with pid [13164]
+1683355799.9392889 [INFO] [twist_mux-5]: process started with pid [13166]
+1683355799.9393451 [INFO] [rviz2-6]: process started with pid [13168]
+1683355799.9530561 [robot_state_publisher-3] [INFO] [1683355799.952693308] [nanosaur.robot_state_publisher]: got segment NVIDIA_jetson
+1683355799.9535227 [robot_state_publisher-3] [INFO] [1683355799.952798320] [nanosaur.robot_state_publisher]: got segment base_front
+1683355799.9536572 [robot_state_publisher-3] [INFO] [1683355799.952805216] [nanosaur.robot_state_publisher]: got segment base_link
+1683355799.9537764 [robot_state_publisher-3] [INFO] [1683355799.952809378] [nanosaur.robot_state_publisher]: got segment base_rear
+1683355799.9538519 [robot_state_publisher-3] [INFO] [1683355799.952812629] [nanosaur.robot_state_publisher]: got segment board_expansion
+1683355799.9539256 [robot_state_publisher-3] [INFO] [1683355799.952817779] [nanosaur.robot_state_publisher]: got segment camera_board
+1683355799.9539969 [robot_state_publisher-3] [INFO] [1683355799.952822277] [nanosaur.robot_state_publisher]: got segment camera_camera_link
+1683355799.9540701 [robot_state_publisher-3] [INFO] [1683355799.952826989] [nanosaur.robot_state_publisher]: got segment camera_camera_link_frame
+1683355799.9541390 [robot_state_publisher-3] [INFO] [1683355799.952832247] [nanosaur.robot_state_publisher]: got segment camera_optical_frame
+1683355799.9542055 [robot_state_publisher-3] [INFO] [1683355799.952837447] [nanosaur.robot_state_publisher]: got segment cover
+1683355799.9542744 [robot_state_publisher-3] [INFO] [1683355799.952842577] [nanosaur.robot_state_publisher]: got segment display_left
+1683355799.9543395 [robot_state_publisher-3] [INFO] [1683355799.952847306] [nanosaur.robot_state_publisher]: got segment display_right
+1683355799.9544082 [robot_state_publisher-3] [INFO] [1683355799.952852268] [nanosaur.robot_state_publisher]: got segment flap_bottom
+1683355799.9544713 [robot_state_publisher-3] [INFO] [1683355799.952857055] [nanosaur.robot_state_publisher]: got segment flap_top
+1683355799.9545393 [robot_state_publisher-3] [INFO] [1683355799.952861763] [nanosaur.robot_state_publisher]: got segment front_wheel_left
+1683355799.9546092 [robot_state_publisher-3] [INFO] [1683355799.952866758] [nanosaur.robot_state_publisher]: got segment front_wheel_right
+1683355799.9546781 [robot_state_publisher-3] [INFO] [1683355799.952870166] [nanosaur.robot_state_publisher]: got segment motor_board
+1683355799.9547434 [robot_state_publisher-3] [INFO] [1683355799.952873440] [nanosaur.robot_state_publisher]: got segment motor_left
+1683355799.9548082 [robot_state_publisher-3] [INFO] [1683355799.952876592] [nanosaur.robot_state_publisher]: got segment motor_right
+1683355799.9548681 [robot_state_publisher-3] [INFO] [1683355799.952879671] [nanosaur.robot_state_publisher]: got segment pb_holder
+1683355799.9549375 [robot_state_publisher-3] [INFO] [1683355799.952882768] [nanosaur.robot_state_publisher]: got segment power_bank
+1683355799.9550002 [robot_state_publisher-3] [INFO] [1683355799.952885863] [nanosaur.robot_state_publisher]: got segment slider_left
+1683355799.9550672 [robot_state_publisher-3] [INFO] [1683355799.952888908] [nanosaur.robot_state_publisher]: got segment slider_right
+1683355799.9551301 [robot_state_publisher-3] [INFO] [1683355799.952892020] [nanosaur.robot_state_publisher]: got segment sprocket_left
+1683355799.9554875 [robot_state_publisher-3] [INFO] [1683355799.952895379] [nanosaur.robot_state_publisher]: got segment sprocket_right
+1683355799.9555833 [robot_state_publisher-3] [INFO] [1683355799.952899099] [nanosaur.robot_state_publisher]: got segment track_left
+1683355799.9556708 [robot_state_publisher-3] [INFO] [1683355799.952902239] [nanosaur.robot_state_publisher]: got segment track_right
+1683355799.9557381 [robot_state_publisher-3] [INFO] [1683355799.952905468] [nanosaur.robot_state_publisher]: got segment wheel_left
+1683355799.9558010 [robot_state_publisher-3] [INFO] [1683355799.952908612] [nanosaur.robot_state_publisher]: got segment wheel_right
+1683355806.8990278 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1683355806.9000926 [robot_state_publisher-3] [INFO] [1683355806.898567715] [rclcpp]: signal_handler(signum=2)
+1683355806.9086907 [ERROR] [gzclient-2]: process has died [pid 13160, exit code -2, cmd 'gzclient --verbose'].
+1683355806.9093490 [ERROR] [gzserver-1]: process has died [pid 13158, exit code -2, cmd 'gzserver /home/user/Project/Test/test_nanosaur/install/nanosaur_worlds/share/nanosaur_worlds/worlds/lab.world --verbose -slibgazebo_ros_factory.so -slibgazebo_ros_force_system.so'].
+1683355806.9295819 [ERROR] [spawn_entity.py-4]: process has died [pid 13164, exit code -2, cmd '/opt/ros/humble/lib/gazebo_ros/spawn_entity.py -entity nanosaur -topic robot_description -x 0.0 -y 0.0 -z 0.0 -R 0.0 -P 0.0 -Y -1.57 --ros-args -r __node:=spawn_entity -r __ns:=/nanosaur'].
+1683355806.9668589 [ERROR] [robot_state_publisher-3]: process has died [pid 13162, exit code -11, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args -r __ns:=/nanosaur --params-file /tmp/launch_params_flva0edj'].
+1683355807.0093887 [INFO] [twist_mux-5]: process has finished cleanly [pid 13166]
+1683355807.0737650 [INFO] [rviz2-6]: process has finished cleanly [pid 13168]

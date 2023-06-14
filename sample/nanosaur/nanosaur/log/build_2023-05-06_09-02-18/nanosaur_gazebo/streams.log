@@ -1,0 +1,51 @@
+[0.009s] Invoking command in '/home/user/nanosaur/build/nanosaur_gazebo': AMENT_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/opt/ros/humble /usr/bin/cmake /home/user/nanosaur/src/nanosaur_simulations/nanosaur_gazebo -DCMAKE_INSTALL_PREFIX=/home/user/nanosaur/install/nanosaur_gazebo
+[0.040s] -- The C compiler identification is GNU 11.3.0
+[0.073s] -- The CXX compiler identification is GNU 11.3.0
+[0.077s] -- Detecting C compiler ABI info
+[0.117s] -- Detecting C compiler ABI info - done
+[0.121s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.121s] -- Detecting C compile features
+[0.121s] -- Detecting C compile features - done
+[0.123s] -- Detecting CXX compiler ABI info
+[0.164s] -- Detecting CXX compiler ABI info - done
+[0.169s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.169s] -- Detecting CXX compile features
+[0.169s] -- Detecting CXX compile features - done
+[0.170s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.267s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.355s] -- Configuring done
+[0.356s] -- Generating done
+[0.357s] -- Build files have been written to: /home/user/nanosaur/build/nanosaur_gazebo
+[0.359s] Invoked command in '/home/user/nanosaur/build/nanosaur_gazebo' returned '0': AMENT_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/opt/ros/humble /usr/bin/cmake /home/user/nanosaur/src/nanosaur_simulations/nanosaur_gazebo -DCMAKE_INSTALL_PREFIX=/home/user/nanosaur/install/nanosaur_gazebo
+[0.360s] Invoking command in '/home/user/nanosaur/build/nanosaur_gazebo': AMENT_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_gazebo -- -j16 -l16
+[0.379s] Invoked command in '/home/user/nanosaur/build/nanosaur_gazebo' returned '0': AMENT_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_gazebo -- -j16 -l16
+[0.390s] Invoking command in '/home/user/nanosaur/build/nanosaur_gazebo': AMENT_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_gazebo
+[0.393s] -- Install configuration: ""
+[0.393s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch
+[0.393s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch/gazebo.launch.py
+[0.393s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch/robot_state_publisher.launch.py
+[0.393s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf
+[0.393s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/diff_drive.gazebo.xacro
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/wide.gazebo.xacro
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/zed.gazebo.xacro
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/realsense.gazebo.xacro
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/imu.gazebo.xacro
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/camera.gazebo.xacro
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/nanosaur.gazebo.xacro
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/package_run_dependencies/nanosaur_gazebo
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/parent_prefix_path/nanosaur_gazebo
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/ament_prefix_path.sh
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/ament_prefix_path.dsv
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/path.sh
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/path.dsv
+[0.394s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.bash
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.sh
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.zsh
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.dsv
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/package.dsv
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/packages/nanosaur_gazebo
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/cmake/nanosaur_gazeboConfig.cmake
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/cmake/nanosaur_gazeboConfig-version.cmake
+[0.395s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/package.xml
+[0.397s] Invoked command in '/home/user/nanosaur/build/nanosaur_gazebo' returned '0': AMENT_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_gazebo

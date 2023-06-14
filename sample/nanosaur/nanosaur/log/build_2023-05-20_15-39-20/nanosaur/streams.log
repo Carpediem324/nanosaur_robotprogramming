@@ -1,0 +1,20 @@
+[0.017s] Invoking command in '/home/user/nanosaur/build/nanosaur': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_gazebo:/home/user/nanosaur/install/ros2_camera_receiver:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur -- -j16 -l16
+[0.070s] Invoked command in '/home/user/nanosaur/build/nanosaur' returned '0': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_gazebo:/home/user/nanosaur/install/ros2_camera_receiver:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur -- -j16 -l16
+[0.099s] Invoking command in '/home/user/nanosaur/build/nanosaur': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_gazebo:/home/user/nanosaur/install/ros2_camera_receiver:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur
+[0.109s] -- Install configuration: ""
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/ament_index/resource_index/package_run_dependencies/nanosaur
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/ament_index/resource_index/parent_prefix_path/nanosaur
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/environment/ament_prefix_path.sh
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/environment/ament_prefix_path.dsv
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/environment/path.sh
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/environment/path.dsv
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.bash
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.sh
+[0.110s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.zsh
+[0.111s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.dsv
+[0.111s] -- Installing: /home/user/nanosaur/install/nanosaur/share/nanosaur/package.dsv
+[0.111s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/ament_index/resource_index/packages/nanosaur
+[0.111s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/cmake/nanosaurConfig.cmake
+[0.111s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/cmake/nanosaurConfig-version.cmake
+[0.111s] -- Up-to-date: /home/user/nanosaur/install/nanosaur/share/nanosaur/package.xml
+[0.116s] Invoked command in '/home/user/nanosaur/build/nanosaur' returned '0': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_gazebo:/home/user/nanosaur/install/ros2_camera_receiver:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur

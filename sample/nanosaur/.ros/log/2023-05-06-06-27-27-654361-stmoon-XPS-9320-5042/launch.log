@@ -1,0 +1,3 @@
+1683354447.6548052 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-06-06-27-27-654361-stmoon-XPS-9320-5042
+1683354447.6549063 [INFO] [launch]: Default logging verbosity is set to INFO
+1683354447.7044685 [ERROR] [launch]: Caught exception in launch (see debug for traceback): Caught exception when trying to load file of format [py]: "package 'gazebo_ros' not found, searching: ['/home/user/Project/Test/test_nanosaur/install/nanosaur_worlds', '/home/user/Project/Test/test_nanosaur/install/nanosaur_simulations', '/home/user/Project/Test/test_nanosaur/install/nanosaur_gazebo', '/opt/ros/humble']"

@@ -1,0 +1,1492 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='OfficeChairBlue'>
+      <static>1</static>
+      <link name='body'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://Drawer/meshes/Drawer.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://Drawer/meshes/Drawer.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-0.50543 -1.56472 0 0 -0 0</pose>
+    </model>
+    <model name='OfficeChairBlack'>
+      <static>1</static>
+      <link name='body'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://OfficeChairBlack/meshes/OfficeChairBlack.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://OfficeChairBlack/meshes/OfficeChairBlack_Col.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.502806 -1.56738 0 0 -0 0</pose>
+    </model>
+    <model name='mini_office'>
+      <static>1</static>
+      <link name='base_link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>/home/user/models/mini_office/meshes/mini_office.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/user/models/mini_office/meshes/mini_office.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
+              <submesh>
+                <name>Wall</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>materials/textures/Wall_White.png</albedo_map>
+                <roughness_map>materials/textures/Wall_White.png</roughness_map>
+                <environment_map>materials/textures/IndoorCubemap.dds</environment_map>
+                <light_map uv_set='1'>materials/textures/LightmapEqualizeHistogram.png</light_map>
+                <metalness>0.0</metalness>
+              </metal>
+            </pbr>
+            <script>
+              <uri>/home/user/models/mini_office/materials/scripts/</uri>
+              <uri>/home/user/models/mini_office/materials/textures/</uri>
+              <name>Indoor/Wall_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <visual name='Floor_visual'>
+          <geometry>
+            <mesh>
+              <uri>/home/user/models/mini_office/meshes/mini_office.dae</uri>
+              <scale>0.5 0.5 0.5</scale>
+              <submesh>
+                <name>Floor</name>
+                <center>0</center>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>materials/textures/Floor_Albedo.png</albedo_map>
+                <normal_map>materials/textures/Floor_Normal.png</normal_map>
+                <roughness_map>materials/textures/Floor_Roughness.png</roughness_map>
+                <environment_map>materials/textures/IndoorCubemap.dds</environment_map>
+                <light_map uv_set='1'>materials/textures/LightmapEqualizeHistogram.png</light_map>
+                <metalness>0.0</metalness>
+              </metal>
+            </pbr>
+            <script>
+              <uri>/home/user/models/mini_office/materials/scripts/</uri>
+              <uri>/home/user/models/mini_office/materials/textures/</uri>
+              <name>Indoor/Floor_Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.314104 -0.15948 0 0 -0 0</pose>
+    </model>
+    <model name='nanosaur'>
+      <link name='base_link'>
+        <inertial>
+          <pose>0.007416 0 0.028711 0 -0 0</pose>
+          <mass>0.17</mass>
+          <inertia>
+            <ixx>0.000128586</ixx>
+            <ixy>2.5411e-21</ixy>
+            <ixz>-1.37217e-05</ixz>
+            <iyy>0.000314622</iyy>
+            <iyz>0</iyz>
+            <izz>0.000360215</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_fixed_joint_lump__cover_collision'>
+          <pose>0.063 0 0.034 -1.57079 1.57079 3.14159</pose>
+          <geometry>
+            <cylinder>
+              <length>0.07</length>
+              <radius>0.028</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__base_rear_collision_1'>
+          <pose>0 0 0.02 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.07 0.03</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_link_fixed_joint_lump__base_front_visual'>
+          <pose>0 0 0.03 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/base_front.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__cover_visual_1'>
+          <pose>0.06 0 0.004 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/cover-fe.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__camera_board_visual_2'>
+          <pose>0.072864 0 0.038798 0.087266 1e-06 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/fisheye_camera.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__camera_camera_link_visual_3'>
+          <pose>0.0742 0 0.035 0 -0.087266 0</pose>
+          <geometry>
+            <box>
+              <size>0.02 0.01 0.01</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__display_left_visual_4'>
+          <pose>0.036 0.0242 0.064 0.401425 1e-06 1.57079</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/OLED_Module.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__display_right_visual_5'>
+          <pose>0.036 -0.0242 0.064 0.401425 1e-06 1.57079</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/OLED_Module.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__motor_board_visual_6'>
+          <pose>0.055 0 0.035 0 0.95993 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/motor_board.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__base_rear_visual_7'>
+          <pose>0 0 0.03 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/base_rear.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__NVIDIA_jetson_visual_8'>
+          <pose>0.039 0.022 0.035 0 -0 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/NVIDIA_jetson_nano_4gb.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__flap_bottom_visual_9'>
+          <pose>-0.0432 0 0.0475 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/flap_bottom.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__board_expansion_visual_10'>
+          <pose>-0.052 0.0005 0.047 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/nanosaur-exp-board.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__flap_top_visual_11'>
+          <pose>-0.0432 0 0.0475 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/flap_top.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__pb_holder_visual_12'>
+          <pose>-0.0545 0 0.0239 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/pb_holder.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__power_bank_visual_13'>
+          <pose>0 0 0.0185 0 -0 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/power_bank.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.2 0.2 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <script>
+              <name>Gazebo/DarkGrey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__motor_left_visual_14'>
+          <pose>0.053 0.012 0.015 1.57079 -1.57079 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/Pololu-Micro-Metal-Gearmotor.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.9 0.7 0 1</ambient>
+            <diffuse>0.9 0.7 0 1</diffuse>
+            <specular>0.9 0.7 0 1</specular>
+            <script>
+              <name>Gazebo/Gold</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__track_left_visual_15'>
+          <pose>0.004 0.043 0.015 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/track.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.01 0.01 0.01 1</ambient>
+            <diffuse>0.01 0.01 0.01 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__slider_left_visual_16'>
+          <pose>0.004 0.051 0.015 -1.57079 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/slider.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__motor_right_visual_17'>
+          <pose>0.053 -0.012 0.015 -1.57079 1.57079 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/parts/Pololu-Micro-Metal-Gearmotor.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.9 0.7 0 1</ambient>
+            <diffuse>0.9 0.7 0 1</diffuse>
+            <specular>0.9 0.7 0 1</specular>
+            <script>
+              <name>Gazebo/Gold</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__track_right_visual_18'>
+          <pose>0.004 -0.043 0.015 3.14159 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/track.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.01 0.01 0.01 1</ambient>
+            <diffuse>0.01 0.01 0.01 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__slider_right_visual_19'>
+          <pose>0.004 -0.051 0.015 1.57079 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/slider.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <sensor name='camera' type='wideanglecamera'>
+          <camera>
+            <horizontal_fov>6.283</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+            <lens>
+              <type>custom</type>
+              <custom_function>
+                <c1>1.05</c1>
+                <c2>4</c2>
+                <f>1</f>
+                <fun>tan</fun>
+              </custom_function>
+              <scale_to_hfov>1</scale_to_hfov>
+              <cutoff_angle>3.1415</cutoff_angle>
+              <env_texture_size>512</env_texture_size>
+            </lens>
+            <always_on>1</always_on>
+            <update_rate>30</update_rate>
+          </camera>
+          <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+            <cameraName>camera</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>camera_camera_link_frame</frameName>
+            <hackBaseline>0.07</hackBaseline>
+          </plugin>
+          <pose>0.094124 0 0.036743 0 -0.087266 0</pose>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_wheel_left_joint' type='revolute'>
+        <pose relative_to='base_link'>0.053 0.043 0.015 -1.57079 0 0</pose>
+        <parent>base_link</parent>
+        <child>front_wheel_left</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='front_wheel_left'>
+        <pose relative_to='front_wheel_left_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>1.66667e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.66667e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.66667e-07</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_wheel_left_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.015</length>
+              <radius>0.015</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1e+07</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_wheel_left_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wheel_left_joint' type='revolute'>
+        <pose relative_to='base_link'>-0.046 0.043 0.015 -1.57079 0 0</pose>
+        <parent>base_link</parent>
+        <child>wheel_left</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_left'>
+        <pose relative_to='wheel_left_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>1.66667e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.66667e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.66667e-07</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_left_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.015</length>
+              <radius>0.015</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1e+07</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='wheel_left_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.5 0 0 1</ambient>
+            <diffuse>0.5 0 0 1</diffuse>
+            <specular>0.5 0 0 1</specular>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='front_wheel_right_joint' type='revolute'>
+        <pose relative_to='base_link'>0.053 -0.043 0.015 1.57079 -0 0</pose>
+        <parent>base_link</parent>
+        <child>front_wheel_right</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='front_wheel_right'>
+        <pose relative_to='front_wheel_right_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>1.66667e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.66667e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.66667e-07</izz>
+          </inertia>
+        </inertial>
+        <collision name='front_wheel_right_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.015</length>
+              <radius>0.015</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1e+07</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='front_wheel_right_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0.5 0 1</ambient>
+            <diffuse>0 0.5 0 1</diffuse>
+            <specular>0 0.5 0 1</specular>
+            <script>
+              <name>Gazebo/Green</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wheel_right_joint' type='revolute'>
+        <pose relative_to='base_link'>-0.046 -0.043 0.015 1.57079 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheel_right</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheel_right'>
+        <pose relative_to='wheel_right_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>1.66667e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.66667e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.66667e-07</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheel_right_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.015</length>
+              <radius>0.015</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1e+07</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0</mu>
+                <mu2>0</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='wheel_right_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.5 0 0 1</ambient>
+            <diffuse>0.5 0 0 1</diffuse>
+            <specular>0.5 0 0 1</specular>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='sprocket_left_joint' type='revolute'>
+        <pose relative_to='base_link'>0 0.043 0.015 -1.57079 0 0</pose>
+        <parent>base_link</parent>
+        <child>sprocket_left</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='sprocket_left'>
+        <pose relative_to='sprocket_left_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>1.66667e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.66667e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.66667e-07</izz>
+          </inertia>
+        </inertial>
+        <collision name='sprocket_left_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.015</length>
+              <radius>0.015</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1e+07</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1e+07</mu>
+                <mu2>1e+07</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='sprocket_left_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/sprocket.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 0.5 1</ambient>
+            <diffuse>0 0 0.5 1</diffuse>
+            <specular>0 0 0.5 1</specular>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='sprocket_right_joint' type='revolute'>
+        <pose relative_to='base_link'>0 -0.043 0.015 1.57079 -0 0</pose>
+        <parent>base_link</parent>
+        <child>sprocket_right</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='sprocket_right'>
+        <pose relative_to='sprocket_right_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>1.66667e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.66667e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.66667e-07</izz>
+          </inertia>
+        </inertial>
+        <collision name='sprocket_right_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.015</length>
+              <radius>0.015</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+07</kp>
+                <kd>1e+07</kd>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1e+07</mu>
+                <mu2>1e+07</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='sprocket_right_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/user/nanosaur/install/nanosaur_description/share/nanosaur_description/meshes/sprocket.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 0.5 1</ambient>
+            <diffuse>0 0 0.5 1</diffuse>
+            <specular>0 0 0.5 1</specular>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>0</static>
+      <plugin name='skid_steer_drive_controller' filename='libgazebo_ros_diff_drive.so'>
+        <ros>
+          <namespace>/nanosaur</namespace>
+          <argument>--ros-args --remap /cmd_vel:=cmd_vel</argument>
+          <argument>--ros-args --remap /odom:=odom</argument>
+        </ros>
+        <update_rate>100.0</update_rate>
+        <num_wheel_pairs>2</num_wheel_pairs>
+        <left_joint>sprocket_left_joint</left_joint>
+        <left_joint>wheel_left_joint</left_joint>
+        <right_joint>sprocket_right_joint</right_joint>
+        <right_joint>wheel_right_joint</right_joint>
+        <wheel_separation>0.4</wheel_separation>
+        <wheel_diameter>0.03</wheel_diameter>
+        <wheel_acceleration>0.0</wheel_acceleration>
+        <max_wheel_torque>15</max_wheel_torque>
+        <odometry_frame>odom</odometry_frame>
+        <robot_base_frame>base_link</robot_base_frame>
+        <publish_odom>1</publish_odom>
+        <publish_odom_tf>0</publish_odom_tf>
+        <publish_wheel_tf>1</publish_wheel_tf>
+        <odometry_source>1</odometry_source>
+        <publis_wheel_joint_state>0</publis_wheel_joint_state>
+      </plugin>
+      <pose>0.386406 -0.274579 0 0 -0 0</pose>
+    </model>
+    <model name='AdjTable'>
+      <static>1</static>
+      <link name='body'>
+        <pose>0 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://AdjTable/meshes/AdjTable.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://AdjTable/meshes/AdjTable_Col.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.439232 -2.38843 0 0 -0 0</pose>
+    </model>
+    <model name='books'>
+      <static>1</static>
+      <link name='books_link'>
+        <collision name='books_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://books/meshes/model.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='books_mesh'>
+          <cast_shadows>1</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://books/meshes/model.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>0.639348 -2.70522 0 0 -0 0</pose>
+    </model>
+    <model name='desktop'>
+      <static>1</static>
+      <link name='desktop_link'>
+        <collision name='desktop_collision'>
+          <geometry>
+            <mesh>
+              <uri>model://desktop/meshes/model.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='main_table_collision'>
+          <pose>0.5 0.5 0.73 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 1.9 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='second_table_collision'>
+          <pose>1.5 1.5 0.73 0 -0 1.7</pose>
+          <geometry>
+            <box>
+              <size>1.2 2 0.05</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='desktop_mesh'>
+          <cast_shadows>1</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://desktop/meshes/model.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-1.38201 -0.803141 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>170 994000000</sim_time>
+      <real_time>172 704959279</real_time>
+      <wall_time>1684222791 459846944</wall_time>
+      <iterations>170994</iterations>
+      <model name='AdjTable'>
+        <pose>2.07746 -2.90128 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='body'>
+          <pose>2.07746 -2.90128 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='OfficeChairBlack'>
+        <pose>2.18299 -2.06164 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='body'>
+          <pose>2.18299 -2.06164 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='OfficeChairBlue'>
+        <pose>0.983241 -2.83056 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='body'>
+          <pose>0.983241 -2.83056 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='books'>
+        <pose>1.71779 -3.178 0.902308 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='books_link'>
+          <pose>1.71779 -3.178 0.902308 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='desktop'>
+        <pose>0.167807 -3.44624 0 0 -0 1.56346</pose>
+        <scale>1 1 1</scale>
+        <link name='desktop_link'>
+          <pose>0.167807 -3.44624 0 0 -0 1.56346</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='mini_office'>
+        <pose>0.314104 -0.15948 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>0.314104 -0.15948 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='nanosaur'>
+        <pose>0.395694 -0.276863 -6e-06 -5.6e-05 4.5e-05 -0.017425</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>0.395694 -0.276863 -6e-06 -5.6e-05 4.5e-05 -0.017425</pose>
+          <velocity>8.5e-05 0.000833 0.000207 0.006904 -0.003353 -0.000394</velocity>
+          <acceleration>-0.058832 0.027038 0.798999 -0.575671 -0.037444 0.347798</acceleration>
+          <wrench>-0.010001 0.004596 0.13583 0 -0 0</wrench>
+        </link>
+        <link name='front_wheel_left'>
+          <pose>0.449436 -0.234792 0.01499 -1.572 0.0005 -0.017426</pose>
+          <velocity>5.2e-05 0.000717 0.000617 -0.147766 0.002583 -0.000409</velocity>
+          <acceleration>0.09441 0.293758 2.24716 -1.56564 -0.01437 0.300232</acceleration>
+          <wrench>0.000944 0.002938 0.022472 0 -0 0</wrench>
+        </link>
+        <link name='front_wheel_right'>
+          <pose>0.447937 -0.320779 0.014994 1.5702 -0.000263 -0.017425</pose>
+          <velocity>1.8e-05 0.000726 0.000374 0.007 -0.000126 -0.000399</velocity>
+          <acceleration>0.121414 0.303086 0.650321 1.05807 -1.44168 0.341593</acceleration>
+          <wrench>0.001214 0.003031 0.006503 0 -0 0</wrench>
+        </link>
+        <link name='sprocket_left'>
+          <pose>0.396444 -0.233868 0.014991 -1.57221 0.562117 -0.018174</pose>
+          <velocity>4.7e-05 0.000839 0.000604 -0.055943 0.003108 -0.000171</velocity>
+          <acceleration>0.082277 0.551337 1.84254 1.76102 1.16177 -2.76823</acceleration>
+          <wrench>0.000823 0.005513 0.018425 0 -0 0</wrench>
+        </link>
+        <link name='sprocket_right'>
+          <pose>0.394945 -0.319855 0.014997 1.57045 0.545937 -0.017596</pose>
+          <velocity>1.3e-05 0.000746 -0.000176 -0.049731 0.000883 -0.000563</velocity>
+          <acceleration>0.101592 0.269276 -0.082695 0.897955 0.489262 -0.246864</acceleration>
+          <wrench>0.001016 0.002693 -0.000827 0 -0 0</wrench>
+        </link>
+        <link name='wheel_left'>
+          <pose>0.350451 -0.233067 0.014994 -1.57021 -0.024127 -0.017439</pose>
+          <velocity>5.7e-05 0.00075 0.0005 -0.027806 -0.002756 -0.000363</velocity>
+          <acceleration>0.091967 0.267904 0.936157 1.07478 -0.074808 -2.78757</acceleration>
+          <wrench>0.00092 0.002679 0.009362 0 -0 0</wrench>
+        </link>
+        <link name='wheel_right'>
+          <pose>0.348952 -0.319054 0.014998 1.57106 -0.008288 -0.017428</pose>
+          <velocity>1.8e-05 0.000761 -0.000286 -0.023822 -0.002999 -0.000374</velocity>
+          <acceleration>0.123832 0.273805 -0.55548 1.04821 0.658347 -2.79791</acceleration>
+          <wrench>0.001238 0.002738 -0.005555 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>7.23021 -1.60394 6.34611 0 0.667644 2.97218</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>

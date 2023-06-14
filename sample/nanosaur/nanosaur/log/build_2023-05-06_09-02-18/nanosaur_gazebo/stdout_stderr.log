@@ -1,0 +1,45 @@
+-- The C compiler identification is GNU 11.3.0
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/nanosaur/build/nanosaur_gazebo
+-- Install configuration: ""
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch/gazebo.launch.py
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch/robot_state_publisher.launch.py
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/diff_drive.gazebo.xacro
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/wide.gazebo.xacro
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/zed.gazebo.xacro
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/realsense.gazebo.xacro
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/imu.gazebo.xacro
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/camera.gazebo.xacro
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/nanosaur.gazebo.xacro
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/package_run_dependencies/nanosaur_gazebo
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/parent_prefix_path/nanosaur_gazebo
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/ament_prefix_path.sh
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/ament_prefix_path.dsv
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/path.sh
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/path.dsv
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.bash
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.sh
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.zsh
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.dsv
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/package.dsv
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/packages/nanosaur_gazebo
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/cmake/nanosaur_gazeboConfig.cmake
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/cmake/nanosaur_gazeboConfig-version.cmake
+-- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/package.xml

@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from nanosaur_msgs/srv/EyeMessage.srv
+// generated code does not contain a copyright notice
+
+
+module nanosaur_msgs {
+  module srv {
+    module EyeMessage_Request_Constants {
+      @verbatim (language="comment", text=
+        "Type message" "\n"        "Left and right message (All lines splitted in both display)")
+      const int8 BOTH = 0;
+      @verbatim (language="comment", text=
+        "Left screen")
+      const int8 LEFT = 1;
+      @verbatim (language="comment", text=
+        "Right screen")
+      const int8 RIGHT = 2;
+      @verbatim (language="comment", text=
+        "Type message" "\n"        "all messages line by line (5 lines for display)")
+      const int8 FULL = 0;
+      @verbatim (language="comment", text=
+        "one string screen (Will be read only the first two lines)")
+      const int8 WIDE = 1;
+      @verbatim (language="comment", text=
+        "two strings screen (Will be read only the first array)")
+      const int8 TWO_LINES = 2;
+      @verbatim (language="comment", text=
+        "Timeout show message" "\n"        "No timeout message")
+      const int64 INF = -1;
+    };
+    @verbatim (language="comment", text=
+      "Generic message writer")
+    struct EyeMessage_Request {
+      int8 display;
+
+      int8 type;
+
+      @verbatim (language="comment", text=
+        "Message to send" "\n"
+        "0 - 5 = left display" "\n"
+        "6 - 11 = right display")
+      sequence<string> message;
+
+      int64 timeout;
+    };
+    struct EyeMessage_Response {
+      boolean done;
+    };
+  };
+};

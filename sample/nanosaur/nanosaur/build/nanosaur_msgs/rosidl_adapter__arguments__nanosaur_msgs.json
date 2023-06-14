@@ -1,0 +1,7 @@
+{
+  "package_name": "nanosaur_msgs",
+  "non_idl_tuples": [
+    "/home/user/nanosaur/src/nanosaur/nanosaur_msgs:msg/Eyes.msg",
+    "/home/user/nanosaur/src/nanosaur/nanosaur_msgs:srv/EyeMessage.srv"
+  ]
+}

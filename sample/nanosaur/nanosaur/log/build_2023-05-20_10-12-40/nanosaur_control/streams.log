@@ -1,0 +1,28 @@
+[0.045s] Invoking command in '/home/user/nanosaur/build/nanosaur_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_control -- -j16 -l16
+[0.088s] Invoked command in '/home/user/nanosaur/build/nanosaur_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_control -- -j16 -l16
+[0.111s] Invoking command in '/home/user/nanosaur/build/nanosaur_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_control
+[0.131s] -- Install configuration: ""
+[0.131s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/launch
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/launch/twist_control.launch.py
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/launch/teleop.launch.py
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/twist_mux_locks.yaml
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/joystick.yaml
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/ps3.nanosaur.yml
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/twist_mux_topics.yaml
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/ament_index/resource_index/package_run_dependencies/nanosaur_control
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/ament_index/resource_index/parent_prefix_path/nanosaur_control
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/ament_prefix_path.sh
+[0.132s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/ament_prefix_path.dsv
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/path.sh
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/path.dsv
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.bash
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.sh
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.zsh
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.dsv
+[0.133s] -- Installing: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/package.dsv
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/ament_index/resource_index/packages/nanosaur_control
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/cmake/nanosaur_controlConfig.cmake
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/cmake/nanosaur_controlConfig-version.cmake
+[0.133s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/package.xml
+[0.190s] Invoked command in '/home/user/nanosaur/build/nanosaur_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_control

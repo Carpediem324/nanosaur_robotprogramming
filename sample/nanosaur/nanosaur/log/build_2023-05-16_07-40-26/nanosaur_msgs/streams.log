@@ -1,0 +1,190 @@
+[0.028s] Invoking command in '/home/user/nanosaur/build/nanosaur_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_msgs -- -j16 -l16
+[0.077s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_generator_c[0m
+[0.082s] [  2%] Built target nanosaur_msgs__cpp
+[0.087s] [ 12%] Built target nanosaur_msgs__rosidl_generator_c
+[0.091s] [ 12%] Built target ament_cmake_python_copy_nanosaur_msgs
+[0.099s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_introspection_cpp[0m
+[0.101s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_cpp[0m
+[0.101s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[0.103s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_fastrtps_c[0m
+[0.104s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_c[0m
+[0.107s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_introspection_c[0m
+[0.110s] [ 23%] Built target nanosaur_msgs__rosidl_typesupport_introspection_cpp
+[0.112s] [ 33%] Built target nanosaur_msgs__rosidl_typesupport_cpp
+[0.114s] [ 43%] Built target nanosaur_msgs__rosidl_typesupport_c
+[0.115s] [ 53%] Built target nanosaur_msgs__rosidl_typesupport_fastrtps_cpp
+[0.120s] [ 64%] Built target nanosaur_msgs__rosidl_typesupport_fastrtps_c
+[0.122s] [ 74%] Built target nanosaur_msgs__rosidl_typesupport_introspection_c
+[0.152s] [ 74%] Built target nanosaur_msgs
+[0.180s] [ 76%] Built target nanosaur_msgs__py
+[0.190s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_generator_py[0m
+[0.203s] [ 84%] Built target nanosaur_msgs__rosidl_generator_py
+[0.216s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.222s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[0.223s] [35m[1mConsolidate compiler generated dependencies of target nanosaur_msgs__rosidl_typesupport_c__pyext[0m
+[0.232s] [ 89%] Built target nanosaur_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.237s] [ 94%] Built target nanosaur_msgs__rosidl_typesupport_introspection_c__pyext
+[0.240s] [100%] Built target nanosaur_msgs__rosidl_typesupport_c__pyext
+[0.277s] running egg_info
+[0.278s] writing nanosaur_msgs.egg-info/PKG-INFO
+[0.279s] writing dependency_links to nanosaur_msgs.egg-info/dependency_links.txt
+[0.279s] writing top-level names to nanosaur_msgs.egg-info/top_level.txt
+[0.281s] reading manifest file 'nanosaur_msgs.egg-info/SOURCES.txt'
+[0.283s] writing manifest file 'nanosaur_msgs.egg-info/SOURCES.txt'
+[0.314s] [100%] Built target ament_cmake_python_build_nanosaur_msgs_egg
+[0.342s] Invoked command in '/home/user/nanosaur/build/nanosaur_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_msgs -- -j16 -l16
+[0.431s] Invoking command in '/home/user/nanosaur/build/nanosaur_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_msgs
+[0.443s] -- Install configuration: ""
+[0.443s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/ament_index/resource_index/rosidl_interfaces/nanosaur_msgs
+[0.446s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs
+[0.446s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv
+[0.446s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/eye_message.h
+[0.448s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail
+[0.449s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__functions.h
+[0.452s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__struct.h
+[0.454s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__functions.c
+[0.456s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__type_support.h
+[0.458s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg
+[0.458s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.460s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/eyes.h
+[0.462s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail
+[0.462s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__functions.c
+[0.465s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__functions.h
+[0.466s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__struct.h
+[0.468s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__type_support.h
+[0.470s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/library_path.sh
+[0.473s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/library_path.dsv
+[0.477s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_generator_c.so
+[0.479s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs
+[0.479s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv
+[0.479s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail
+[0.479s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__rosidl_typesupport_fastrtps_c.h
+[0.480s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg
+[0.480s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.481s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail
+[0.481s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__rosidl_typesupport_fastrtps_c.h
+[0.484s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_typesupport_fastrtps_c.so
+[0.486s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs
+[0.486s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv
+[0.486s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail
+[0.486s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__rosidl_typesupport_introspection_c.h
+[0.490s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__type_support.c
+[0.492s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg
+[0.492s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.494s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail
+[0.494s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__rosidl_typesupport_introspection_c.h
+[0.496s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__type_support.c
+[0.499s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_typesupport_introspection_c.so
+[0.502s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_typesupport_c.so
+[0.504s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs
+[0.504s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv
+[0.504s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/eye_message.hpp
+[0.506s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail
+[0.507s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__builder.hpp
+[0.508s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__traits.hpp
+[0.511s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__struct.hpp
+[0.514s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg
+[0.514s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/eyes.hpp
+[0.517s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail
+[0.517s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__builder.hpp
+[0.520s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__traits.hpp
+[0.522s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__struct.hpp
+[0.525s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs
+[0.525s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv
+[0.525s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail
+[0.525s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__rosidl_typesupport_fastrtps_cpp.hpp
+[0.527s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/dds_fastrtps
+[0.527s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg
+[0.527s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.529s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail
+[0.529s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__rosidl_typesupport_fastrtps_cpp.hpp
+[0.531s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/dds_fastrtps
+[0.533s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.535s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs
+[0.536s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv
+[0.536s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail
+[0.536s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__rosidl_typesupport_introspection_cpp.hpp
+[0.538s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/srv/detail/eye_message__type_support.cpp
+[0.540s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg
+[0.540s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail
+[0.541s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__rosidl_typesupport_introspection_cpp.hpp
+[0.542s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/include/nanosaur_msgs/nanosaur_msgs/msg/detail/eyes__type_support.cpp
+[0.550s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_typesupport_introspection_cpp.so
+[0.550s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_typesupport_cpp.so
+[0.551s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/pythonpath.sh
+[0.552s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/pythonpath.dsv
+[0.555s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs-2.1.0-py3.10.egg-info
+[0.555s] -- Installing: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs-2.1.0-py3.10.egg-info/SOURCES.txt
+[0.556s] -- Installing: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs-2.1.0-py3.10.egg-info/top_level.txt
+[0.556s] -- Installing: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs-2.1.0-py3.10.egg-info/PKG-INFO
+[0.556s] -- Installing: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs-2.1.0-py3.10.egg-info/dependency_links.txt
+[0.557s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs
+[0.557s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/libnanosaur_msgs__rosidl_generator_py.so
+[0.559s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/nanosaur_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.562s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/_nanosaur_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.563s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/_nanosaur_msgs_s.ep.rosidl_typesupport_c.c
+[0.566s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/_nanosaur_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[0.568s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/srv
+[0.568s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/srv/_eye_message_s.c
+[0.571s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/srv/_eye_message.py
+[0.577s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/srv/__init__.py
+[0.578s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/msg
+[0.578s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/msg/_eyes_s.c
+[0.578s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/msg/_eyes.py
+[0.578s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/msg/__init__.py
+[0.579s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/nanosaur_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.582s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/__init__.py
+[0.582s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/nanosaur_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.614s] Listing '/home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs'...
+[0.614s] Listing '/home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/msg'...
+[0.614s] Listing '/home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/srv'...
+[0.623s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/nanosaur_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.623s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/nanosaur_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.624s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/local/lib/python3.10/dist-packages/nanosaur_msgs/nanosaur_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.624s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/lib/libnanosaur_msgs__rosidl_generator_py.so
+[0.624s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/msg/Eyes.idl
+[0.624s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/srv/EyeMessage.idl
+[0.624s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/msg/Eyes.msg
+[0.627s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/srv/EyeMessage.srv
+[0.627s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/srv/EyeMessage_Request.msg
+[0.628s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/srv/EyeMessage_Response.msg
+[0.630s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/ament_index/resource_index/package_run_dependencies/nanosaur_msgs
+[0.631s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/ament_index/resource_index/parent_prefix_path/nanosaur_msgs
+[0.633s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/ament_prefix_path.sh
+[0.634s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/ament_prefix_path.dsv
+[0.635s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/path.sh
+[0.636s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/environment/path.dsv
+[0.638s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/local_setup.bash
+[0.639s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/local_setup.sh
+[0.641s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/local_setup.zsh
+[0.643s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/local_setup.dsv
+[0.645s] -- Installing: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/package.dsv
+[0.645s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/ament_index/resource_index/packages/nanosaur_msgs
+[0.647s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_generator_cExport.cmake
+[0.649s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.651s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[0.652s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.654s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.655s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.657s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_cExport.cmake
+[0.658s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.660s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_generator_cppExport.cmake
+[0.662s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.663s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.665s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.666s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.668s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_cppExport.cmake
+[0.669s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.671s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_generator_pyExport.cmake
+[0.672s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/export_nanosaur_msgs__rosidl_generator_pyExport-noconfig.cmake
+[0.673s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/rosidl_cmake-extras.cmake
+[0.675s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.676s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.677s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.679s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.680s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.682s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.683s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgsConfig.cmake
+[0.684s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/cmake/nanosaur_msgsConfig-version.cmake
+[0.686s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_msgs/share/nanosaur_msgs/package.xml
+[0.694s] Invoked command in '/home/user/nanosaur/build/nanosaur_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_msgs

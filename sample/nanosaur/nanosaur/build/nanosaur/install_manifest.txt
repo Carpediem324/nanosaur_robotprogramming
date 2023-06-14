@@ -1,0 +1,15 @@
+/home/user/nanosaur/install/nanosaur/share/ament_index/resource_index/package_run_dependencies/nanosaur
+/home/user/nanosaur/install/nanosaur/share/ament_index/resource_index/parent_prefix_path/nanosaur
+/home/user/nanosaur/install/nanosaur/share/nanosaur/environment/ament_prefix_path.sh
+/home/user/nanosaur/install/nanosaur/share/nanosaur/environment/ament_prefix_path.dsv
+/home/user/nanosaur/install/nanosaur/share/nanosaur/environment/path.sh
+/home/user/nanosaur/install/nanosaur/share/nanosaur/environment/path.dsv
+/home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.bash
+/home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.sh
+/home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.zsh
+/home/user/nanosaur/install/nanosaur/share/nanosaur/local_setup.dsv
+/home/user/nanosaur/install/nanosaur/share/nanosaur/package.dsv
+/home/user/nanosaur/install/nanosaur/share/ament_index/resource_index/packages/nanosaur
+/home/user/nanosaur/install/nanosaur/share/nanosaur/cmake/nanosaurConfig.cmake
+/home/user/nanosaur/install/nanosaur/share/nanosaur/cmake/nanosaurConfig-version.cmake
+/home/user/nanosaur/install/nanosaur/share/nanosaur/package.xml

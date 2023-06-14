@@ -1,0 +1,3 @@
+1684593750.4971786 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-20-14-42-30-496583-shh-2683
+1684593750.4972758 [INFO] [launch]: Default logging verbosity is set to INFO
+1684593751.3247252 [ERROR] [launch]: Caught exception in launch (see debug for traceback): 'LaunchDescription' object is not iterable

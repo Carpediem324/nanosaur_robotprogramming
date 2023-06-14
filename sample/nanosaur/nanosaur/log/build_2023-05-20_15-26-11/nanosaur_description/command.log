@@ -1,0 +1,1 @@
+Invoking command in '/home/user/nanosaur/build/nanosaur_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_description -- -j16 -l16

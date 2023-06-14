@@ -1,0 +1,26 @@
+[INFO] [1684574353.650172291] [robot_state_publisher]: got segment NVIDIA_jetson
+[INFO] [1684574353.650262448] [robot_state_publisher]: got segment base_front
+[INFO] [1684574353.650268449] [robot_state_publisher]: got segment base_link
+[INFO] [1684574353.650272386] [robot_state_publisher]: got segment base_rear
+[INFO] [1684574353.650276233] [robot_state_publisher]: got segment board_expansion
+[INFO] [1684574353.650280211] [robot_state_publisher]: got segment camera_board
+[INFO] [1684574353.650284168] [robot_state_publisher]: got segment camera_optical_frame
+[INFO] [1684574353.650288145] [robot_state_publisher]: got segment cover
+[INFO] [1684574353.650291912] [robot_state_publisher]: got segment display_left
+[INFO] [1684574353.650295699] [robot_state_publisher]: got segment display_right
+[INFO] [1684574353.650299466] [robot_state_publisher]: got segment flap_bottom
+[INFO] [1684574353.650303143] [robot_state_publisher]: got segment flap_top
+[INFO] [1684574353.650306890] [robot_state_publisher]: got segment motor_board
+[INFO] [1684574353.650310597] [robot_state_publisher]: got segment motor_left
+[INFO] [1684574353.650314174] [robot_state_publisher]: got segment motor_right
+[INFO] [1684574353.650317810] [robot_state_publisher]: got segment pb_holder
+[INFO] [1684574353.650321367] [robot_state_publisher]: got segment power_bank
+[INFO] [1684574353.650325014] [robot_state_publisher]: got segment slider_left
+[INFO] [1684574353.650328540] [robot_state_publisher]: got segment slider_right
+[INFO] [1684574353.650332407] [robot_state_publisher]: got segment sprocket_left
+[INFO] [1684574353.650336074] [robot_state_publisher]: got segment sprocket_right
+[INFO] [1684574353.650339971] [robot_state_publisher]: got segment track_left
+[INFO] [1684574353.650343598] [robot_state_publisher]: got segment track_right
+[INFO] [1684574353.650347175] [robot_state_publisher]: got segment wheel_left
+[INFO] [1684574353.650350741] [robot_state_publisher]: got segment wheel_right
+[INFO] [1684574356.516975928] [rclcpp]: signal_handler(signum=2)

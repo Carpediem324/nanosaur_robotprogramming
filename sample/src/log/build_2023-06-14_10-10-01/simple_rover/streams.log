@@ -1,0 +1,70 @@
+[0.006s] Invoking command in '/home/shh/final_project/src/build/simple_rover': AMENT_PREFIX_PATH=/home/shh/final_project/src/install/rover_line_follower:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/shh/final_project/src/simple_rover -DCMAKE_INSTALL_PREFIX=/home/shh/final_project/src/install/simple_rover
+[0.170s] -- The C compiler identification is GNU 11.3.0
+[0.278s] -- The CXX compiler identification is GNU 11.3.0
+[0.290s] -- Detecting C compiler ABI info
+[0.365s] -- Detecting C compiler ABI info - done
+[0.377s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.377s] -- Detecting C compile features
+[0.378s] -- Detecting C compile features - done
+[0.381s] -- Detecting CXX compiler ABI info
+[0.447s] -- Detecting CXX compiler ABI info - done
+[0.458s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.458s] -- Detecting CXX compile features
+[0.458s] -- Detecting CXX compile features - done
+[0.465s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.643s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.745s] -- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.802s] -- Configuring done
+[0.806s] -- Generating done
+[0.806s] -- Build files have been written to: /home/shh/final_project/src/build/simple_rover
+[0.810s] Invoked command in '/home/shh/final_project/src/build/simple_rover' returned '0': AMENT_PREFIX_PATH=/home/shh/final_project/src/install/rover_line_follower:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/shh/final_project/src/simple_rover -DCMAKE_INSTALL_PREFIX=/home/shh/final_project/src/install/simple_rover
+[0.813s] Invoking command in '/home/shh/final_project/src/build/simple_rover': AMENT_PREFIX_PATH=/home/shh/final_project/src/install/rover_line_follower:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/shh/final_project/src/build/simple_rover -- -j16 -l16
+[0.852s] Invoked command in '/home/shh/final_project/src/build/simple_rover' returned '0': AMENT_PREFIX_PATH=/home/shh/final_project/src/install/rover_line_follower:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/shh/final_project/src/build/simple_rover -- -j16 -l16
+[0.884s] Invoking command in '/home/shh/final_project/src/build/simple_rover': AMENT_PREFIX_PATH=/home/shh/final_project/src/install/rover_line_follower:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/shh/final_project/src/build/simple_rover
+[0.893s] -- Install configuration: ""
+[0.894s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch
+[0.894s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/urdf.launch.py
+[0.894s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/sdf.launch.py
+[0.894s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/robot_state_publisher.launch.py
+[0.894s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/display.launch.py
+[0.895s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/line_follower.launch.py
+[0.895s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/rviz
+[0.895s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/rviz/urdf.rviz
+[0.895s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf
+[0.895s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf/simple_rover.urdf.xacro
+[0.895s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf/camera.gazebo.xacro
+[0.896s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds
+[0.896s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds/simplerover_sdf.world
+[0.896s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds/track.world
+[0.896s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models
+[0.896s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track
+[0.896s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/model.config
+[0.897s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/model.sdf
+[0.897s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials
+[0.897s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/scripts
+[0.897s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/scripts/track.material
+[0.897s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures
+[0.897s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/original_track.png
+[0.897s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track01.png
+[0.898s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1_2.png
+[0.898s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track12.png
+[0.898s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1.png
+[0.898s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1 copy.png
+[0.898s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track3.png
+[0.898s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track2 copy.png
+[0.899s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/package_run_dependencies/simple_rover
+[0.899s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/parent_prefix_path/simple_rover
+[0.903s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/ament_prefix_path.sh
+[0.903s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/ament_prefix_path.dsv
+[0.903s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/path.sh
+[0.904s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/path.dsv
+[0.904s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.bash
+[0.904s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.sh
+[0.904s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.zsh
+[0.904s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.dsv
+[0.904s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/package.dsv
+[0.905s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/packages/simple_rover
+[0.905s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/cmake/simple_roverConfig.cmake
+[0.905s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/cmake/simple_roverConfig-version.cmake
+[0.905s] -- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/package.xml
+[0.905s] Invoked command in '/home/shh/final_project/src/build/simple_rover' returned '0': AMENT_PREFIX_PATH=/home/shh/final_project/src/install/rover_line_follower:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/opt/ros/humble PYTHONPATH=/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/shh/final_project/src/build/simple_rover

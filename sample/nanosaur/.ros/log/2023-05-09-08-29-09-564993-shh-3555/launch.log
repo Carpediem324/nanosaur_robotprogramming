@@ -1,0 +1,3 @@
+1683620949.5661447 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-09-08-29-09-564993-shh-3555
+1683620949.5663311 [INFO] [launch]: Default logging verbosity is set to INFO
+1683620949.7340510 [ERROR] [launch]: Caught exception in launch (see debug for traceback): "package 'joint_state_publisher_gui' not found, searching: ['/home/shh/stmoon/install/urdf_tutorial', '/opt/ros/humble']"

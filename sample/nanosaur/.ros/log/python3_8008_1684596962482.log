@@ -1,0 +1,7 @@
+[INFO] [1684596962.613343719] [nanosaur.spawn_entity]: Spawn Entity started
+[INFO] [1684596962.613643403] [nanosaur.spawn_entity]: Loading entity published on topic robot_description
+[INFO] [1684596962.615282833] [nanosaur.spawn_entity]: Waiting for entity xml on robot_description
+[INFO] [1684596962.628016736] [nanosaur.spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[INFO] [1684596962.628268441] [nanosaur.spawn_entity]: Waiting for service /spawn_entity
+[ERROR] [1684596992.700243169] [nanosaur.spawn_entity]: Service %s/spawn_entity unavailable. Was Gazebo started with GazeboRosFactory?
+[ERROR] [1684596992.701018675] [nanosaur.spawn_entity]: Spawn service failed. Exiting.

@@ -1,0 +1,6 @@
+Invoking command in '/home/user/nanosaur/build/nanosaur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/user/nanosaur/src/nanosaur/nanosaur_description -DCMAKE_INSTALL_PREFIX=/home/user/nanosaur/install/nanosaur_description
+Invoked command in '/home/user/nanosaur/build/nanosaur_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/user/nanosaur/src/nanosaur/nanosaur_description -DCMAKE_INSTALL_PREFIX=/home/user/nanosaur/install/nanosaur_description
+Invoking command in '/home/user/nanosaur/build/nanosaur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_description -- -j16 -l16
+Invoked command in '/home/user/nanosaur/build/nanosaur_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_description -- -j16 -l16
+Invoking command in '/home/user/nanosaur/build/nanosaur_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_description
+Invoked command in '/home/user/nanosaur/build/nanosaur_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_description

@@ -1,0 +1,3 @@
+1684576756.2916672 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-20-09-59-16-291083-shh-9120
+1684576756.2917640 [INFO] [launch]: Default logging verbosity is set to INFO
+1684576757.1197834 [ERROR] [launch]: Caught exception in launch (see debug for traceback): 'teleop_twist'

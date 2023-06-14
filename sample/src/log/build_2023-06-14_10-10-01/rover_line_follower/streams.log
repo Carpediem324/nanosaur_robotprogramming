@@ -1,0 +1,39 @@
+[0.464s] Invoking command in '/home/shh/final_project/src/rover_line_follower': PYTHONPATH=/home/shh/final_project/src/build/rover_line_follower/prefix_override:/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/rover_line_follower build --build-base /home/shh/final_project/src/build/rover_line_follower/build install --record /home/shh/final_project/src/build/rover_line_follower/install.log --single-version-externally-managed
+[0.610s] running egg_info
+[0.610s] creating ../build/rover_line_follower/rover_line_follower.egg-info
+[0.610s] writing ../build/rover_line_follower/rover_line_follower.egg-info/PKG-INFO
+[0.611s] writing dependency_links to ../build/rover_line_follower/rover_line_follower.egg-info/dependency_links.txt
+[0.611s] writing entry points to ../build/rover_line_follower/rover_line_follower.egg-info/entry_points.txt
+[0.611s] writing requirements to ../build/rover_line_follower/rover_line_follower.egg-info/requires.txt
+[0.611s] writing top-level names to ../build/rover_line_follower/rover_line_follower.egg-info/top_level.txt
+[0.611s] writing manifest file '../build/rover_line_follower/rover_line_follower.egg-info/SOURCES.txt'
+[0.612s] reading manifest file '../build/rover_line_follower/rover_line_follower.egg-info/SOURCES.txt'
+[0.612s] writing manifest file '../build/rover_line_follower/rover_line_follower.egg-info/SOURCES.txt'
+[0.612s] running build
+[0.612s] running build_py
+[0.613s] creating /home/shh/final_project/src/build/rover_line_follower/build
+[0.613s] creating /home/shh/final_project/src/build/rover_line_follower/build/lib
+[0.613s] creating /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower
+[0.613s] copying rover_line_follower/rover_line_follower.py -> /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower
+[0.613s] copying rover_line_follower/__init__.py -> /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower
+[0.614s] running install
+[0.614s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.614s]   warnings.warn(
+[0.614s] running install_lib
+[0.614s] creating /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower
+[0.614s] copying /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower/rover_line_follower.py -> /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower
+[0.614s] copying /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower/__init__.py -> /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower
+[0.615s] byte-compiling /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower/rover_line_follower.py to rover_line_follower.cpython-310.pyc
+[0.615s] byte-compiling /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower/__init__.py to __init__.cpython-310.pyc
+[0.615s] running install_data
+[0.615s] creating /home/shh/final_project/src/install/rover_line_follower/share/ament_index
+[0.616s] creating /home/shh/final_project/src/install/rover_line_follower/share/ament_index/resource_index
+[0.616s] creating /home/shh/final_project/src/install/rover_line_follower/share/ament_index/resource_index/packages
+[0.616s] copying resource/rover_line_follower -> /home/shh/final_project/src/install/rover_line_follower/share/ament_index/resource_index/packages
+[0.616s] copying package.xml -> /home/shh/final_project/src/install/rover_line_follower/share/rover_line_follower
+[0.616s] running install_egg_info
+[0.616s] Copying ../build/rover_line_follower/rover_line_follower.egg-info to /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower-0.0.0-py3.10.egg-info
+[0.617s] running install_scripts
+[0.632s] Installing rover_line_follower script to /home/shh/final_project/src/install/rover_line_follower/lib/rover_line_follower
+[0.632s] writing list of installed files to '/home/shh/final_project/src/build/rover_line_follower/install.log'
+[0.655s] Invoked command in '/home/shh/final_project/src/rover_line_follower' returned '0': PYTHONPATH=/home/shh/final_project/src/build/rover_line_follower/prefix_override:/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/rover_line_follower build --build-base /home/shh/final_project/src/build/rover_line_follower/build install --record /home/shh/final_project/src/build/rover_line_follower/install.log --single-version-externally-managed

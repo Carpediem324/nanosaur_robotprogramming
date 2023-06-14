@@ -1,0 +1,36 @@
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/urdf.launch.py
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/sdf.launch.py
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/robot_state_publisher.launch.py
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/display.launch.py
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/line_follower.launch.py
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/rviz/urdf.rviz
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf/simple_rover.urdf.xacro
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf/camera.gazebo.xacro
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds/simplerover_sdf.world
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds/track.world
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/model.config
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/model.sdf
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/scripts/track.material
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/original_track.png
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track01.png
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1_2.png
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track12.png
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1.png
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1 copy.png
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track3.png
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track2 copy.png
+/home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/package_run_dependencies/simple_rover
+/home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/parent_prefix_path/simple_rover
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/ament_prefix_path.sh
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/ament_prefix_path.dsv
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/path.sh
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/path.dsv
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.bash
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.sh
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.zsh
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.dsv
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/package.dsv
+/home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/packages/simple_rover
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/cmake/simple_roverConfig.cmake
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/cmake/simple_roverConfig-version.cmake
+/home/shh/final_project/src/install/simple_rover/share/simple_rover/package.xml

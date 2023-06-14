@@ -1,0 +1,10 @@
+1683621448.1580873 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-09-08-37-28-156996-shh-3741
+1683621448.1582663 [INFO] [launch]: Default logging verbosity is set to INFO
+1683621448.4041722 [ERROR] [launch]: Caught exception in launch (see debug for traceback): executed command failed. Command: xacro test_urdf_quiz/src/urdf_tutorial/urdf/simple_rover_quiz.urdf.xacro
+Captured stderr output: XML parsing error: mismatched tag: line 99, column 10
+when processing file: test_urdf_quiz/src/urdf_tutorial/urdf/simple_rover_quiz.urdf.xacro
+
+Check that:
+ - Your XML is well-formed
+ - You have the xacro xmlns declaration: xmlns:xacro="http://www.ros.org/wiki/xacro"
+

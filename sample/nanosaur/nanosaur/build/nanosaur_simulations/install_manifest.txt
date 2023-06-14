@@ -1,0 +1,15 @@
+/home/user/nanosaur/install/nanosaur_simulations/share/ament_index/resource_index/package_run_dependencies/nanosaur_simulations
+/home/user/nanosaur/install/nanosaur_simulations/share/ament_index/resource_index/parent_prefix_path/nanosaur_simulations
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/ament_prefix_path.sh
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/ament_prefix_path.dsv
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/path.sh
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/path.dsv
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.bash
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.sh
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.zsh
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.dsv
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/package.dsv
+/home/user/nanosaur/install/nanosaur_simulations/share/ament_index/resource_index/packages/nanosaur_simulations
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/cmake/nanosaur_simulationsConfig.cmake
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/cmake/nanosaur_simulationsConfig-version.cmake
+/home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/package.xml

@@ -1,0 +1,67 @@
+1684577527.9635882 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-20-10-12-07-962999-shh-11915
+1684577527.9636850 [INFO] [launch]: Default logging verbosity is set to INFO
+1684577528.8730443 [ERROR] [xterm-e-5]: exception occurred while executing process:
+Traceback (most recent call last):
+  File "/opt/ros/humble/lib/python3.10/site-packages/launch/actions/execute_local.py", line 546, in __execute_process
+    transport, self._subprocess_protocol = await async_execute_process(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 139, in async_execute_process
+    transport, protocol = await _async_execute_process_nopty(
+  File "/opt/ros/humble/lib/python3.10/site-packages/osrf_pycommon/process_utils/async_execute_process_asyncio/impl.py", line 45, in _async_execute_process_nopty
+    transport, protocol = await loop.subprocess_exec(
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1667, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 207, in _make_subprocess_transport
+    transp = _UnixSubprocessTransport(self, protocol, args, shell,
+  File "/usr/lib/python3.10/asyncio/base_subprocess.py", line 36, in __init__
+    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
+  File "/usr/lib/python3.10/asyncio/unix_events.py", line 799, in _start
+    self._proc = subprocess.Popen(
+  File "/usr/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'xterm-e'
+
+1684577528.8770359 [INFO] [gzserver-1]: process started with pid [11917]
+1684577528.8773527 [INFO] [gzclient-2]: process started with pid [11919]
+1684577528.8775368 [INFO] [robot_state_publisher-3]: process started with pid [11921]
+1684577528.8776853 [INFO] [spawn_entity.py-4]: process started with pid [11923]
+1684577528.8778565 [INFO] [twist_mux-6]: process started with pid [11926]
+1684577528.8780015 [INFO] [rviz2-7]: process started with pid [11928]
+1684577528.9087017 [robot_state_publisher-3] [INFO] [1684577528.908447823] [nanosaur.robot_state_publisher]: got segment NVIDIA_jetson
+1684577528.9090068 [robot_state_publisher-3] [INFO] [1684577528.908593577] [nanosaur.robot_state_publisher]: got segment base_front
+1684577528.9091120 [robot_state_publisher-3] [INFO] [1684577528.908601863] [nanosaur.robot_state_publisher]: got segment base_link
+1684577528.9091768 [robot_state_publisher-3] [INFO] [1684577528.908606492] [nanosaur.robot_state_publisher]: got segment base_rear
+1684577528.9092386 [robot_state_publisher-3] [INFO] [1684577528.908610349] [nanosaur.robot_state_publisher]: got segment board_expansion
+1684577528.9092891 [robot_state_publisher-3] [INFO] [1684577528.908614236] [nanosaur.robot_state_publisher]: got segment camera_board
+1684577528.9093232 [robot_state_publisher-3] [INFO] [1684577528.908618685] [nanosaur.robot_state_publisher]: got segment camera_camera_link
+1684577528.9093592 [robot_state_publisher-3] [INFO] [1684577528.908622512] [nanosaur.robot_state_publisher]: got segment camera_camera_link_frame
+1684577528.9094026 [robot_state_publisher-3] [INFO] [1684577528.908626389] [nanosaur.robot_state_publisher]: got segment camera_optical_frame
+1684577528.9094419 [robot_state_publisher-3] [INFO] [1684577528.908630287] [nanosaur.robot_state_publisher]: got segment cover
+1684577528.9094841 [robot_state_publisher-3] [INFO] [1684577528.908634054] [nanosaur.robot_state_publisher]: got segment display_left
+1684577528.9095225 [robot_state_publisher-3] [INFO] [1684577528.908637911] [nanosaur.robot_state_publisher]: got segment display_right
+1684577528.9095623 [robot_state_publisher-3] [INFO] [1684577528.908641848] [nanosaur.robot_state_publisher]: got segment flap_bottom
+1684577528.9096010 [robot_state_publisher-3] [INFO] [1684577528.908645746] [nanosaur.robot_state_publisher]: got segment flap_top
+1684577528.9096565 [robot_state_publisher-3] [INFO] [1684577528.908649383] [nanosaur.robot_state_publisher]: got segment front_wheel_left
+1684577528.9097006 [robot_state_publisher-3] [INFO] [1684577528.908653080] [nanosaur.robot_state_publisher]: got segment front_wheel_right
+1684577528.9097550 [robot_state_publisher-3] [INFO] [1684577528.908656817] [nanosaur.robot_state_publisher]: got segment motor_board
+1684577528.9098041 [robot_state_publisher-3] [INFO] [1684577528.908660504] [nanosaur.robot_state_publisher]: got segment motor_left
+1684577528.9098482 [robot_state_publisher-3] [INFO] [1684577528.908664211] [nanosaur.robot_state_publisher]: got segment motor_right
+1684577528.9099026 [robot_state_publisher-3] [INFO] [1684577528.908667877] [nanosaur.robot_state_publisher]: got segment pb_holder
+1684577528.9099560 [robot_state_publisher-3] [INFO] [1684577528.908671604] [nanosaur.robot_state_publisher]: got segment power_bank
+1684577528.9100206 [robot_state_publisher-3] [INFO] [1684577528.908675331] [nanosaur.robot_state_publisher]: got segment slider_left
+1684577528.9100792 [robot_state_publisher-3] [INFO] [1684577528.908679048] [nanosaur.robot_state_publisher]: got segment slider_right
+1684577528.9101307 [robot_state_publisher-3] [INFO] [1684577528.908682745] [nanosaur.robot_state_publisher]: got segment sprocket_left
+1684577528.9101779 [robot_state_publisher-3] [INFO] [1684577528.908686533] [nanosaur.robot_state_publisher]: got segment sprocket_right
+1684577528.9102321 [robot_state_publisher-3] [INFO] [1684577528.908690340] [nanosaur.robot_state_publisher]: got segment track_left
+1684577528.9103141 [robot_state_publisher-3] [INFO] [1684577528.908694137] [nanosaur.robot_state_publisher]: got segment track_right
+1684577528.9103892 [robot_state_publisher-3] [INFO] [1684577528.908697894] [nanosaur.robot_state_publisher]: got segment wheel_left
+1684577528.9104598 [robot_state_publisher-3] [INFO] [1684577528.908701651] [nanosaur.robot_state_publisher]: got segment wheel_right
+1684577530.6360281 [INFO] [spawn_entity.py-4]: process has finished cleanly [pid 11923]
+1684577539.8366137 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1684577539.8431606 [robot_state_publisher-3] [INFO] [1684577539.836265163] [rclcpp]: signal_handler(signum=2)
+1684577539.9509974 [INFO] [twist_mux-6]: process has finished cleanly [pid 11926]
+1684577539.9939992 [ERROR] [robot_state_publisher-3]: process has died [pid 11921, exit code -11, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args -r __ns:=/nanosaur --params-file /tmp/launch_params_xwo0gekm'].
+1684577540.0388222 [INFO] [rviz2-7]: process has finished cleanly [pid 11928]
+1684577540.0942607 [INFO] [gzserver-1]: process has finished cleanly [pid 11917]
+1684577540.2660892 [ERROR] [gzclient-2]: process has died [pid 11919, exit code -11, cmd 'gzclient --verbose'].

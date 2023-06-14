@@ -1,0 +1,8 @@
+[INFO] [1684222834.081629131] [nanosaur.spawn_entity]: Spawn Entity started
+[INFO] [1684222834.081940793] [nanosaur.spawn_entity]: Loading entity published on topic robot_description
+[INFO] [1684222834.083734913] [nanosaur.spawn_entity]: Waiting for entity xml on robot_description
+[INFO] [1684222834.096649008] [nanosaur.spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[INFO] [1684222834.097263075] [nanosaur.spawn_entity]: Waiting for service /spawn_entity
+[INFO] [1684222834.602746049] [nanosaur.spawn_entity]: Calling service /spawn_entity
+[INFO] [1684222834.653471557] [nanosaur.spawn_entity]: Spawn status: Entity [nanosaur] already exists.
+[ERROR] [1684222834.654040759] [nanosaur.spawn_entity]: Spawn service failed. Exiting.

@@ -1,0 +1,9 @@
+/home/user/nanosaur/build/nanosaur/CMakeFiles/uninstall.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/nanosaur_uninstall.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/all_nanosaur_files.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/test.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/edit_cache.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/rebuild_cache.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/list_install_components.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/install.dir
+/home/user/nanosaur/build/nanosaur/CMakeFiles/install/local.dir

@@ -1,0 +1,20 @@
+[0.024s] Invoking command in '/home/user/nanosaur/build/nanosaur_simulations': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_simulations -- -j16 -l16
+[0.063s] Invoked command in '/home/user/nanosaur/build/nanosaur_simulations' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_simulations -- -j16 -l16
+[0.107s] Invoking command in '/home/user/nanosaur/build/nanosaur_simulations': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_simulations
+[0.190s] -- Install configuration: ""
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/ament_index/resource_index/package_run_dependencies/nanosaur_simulations
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/ament_index/resource_index/parent_prefix_path/nanosaur_simulations
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/ament_prefix_path.sh
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/ament_prefix_path.dsv
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/path.sh
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/environment/path.dsv
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.bash
+[0.190s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.sh
+[0.191s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.zsh
+[0.191s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/local_setup.dsv
+[0.191s] -- Installing: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/package.dsv
+[0.191s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/ament_index/resource_index/packages/nanosaur_simulations
+[0.191s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/cmake/nanosaur_simulationsConfig.cmake
+[0.191s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/cmake/nanosaur_simulationsConfig-version.cmake
+[0.191s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_simulations/share/nanosaur_simulations/package.xml
+[0.191s] Invoked command in '/home/user/nanosaur/build/nanosaur_simulations' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/shh/stmoon/install/nanosaur_ignition:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_simulations

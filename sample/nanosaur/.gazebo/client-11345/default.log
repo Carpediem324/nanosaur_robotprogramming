@@ -1,0 +1,16 @@
+Gazebo multi-robot simulator, version 11.10.2
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1684595323 562566879) [Msg] Waiting for master.
+(1684595323 562770404) Failed to create connection to remote host[localhost:11345]
+(1684595324 573109977) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1684595324 573240236) [Msg] Publicized address: 192.168.0.59
+(1684595324 574260446) Loaded .ini file from: "/home/user/.gazebo/gui.ini"
+(1684595324 781777979) [Wrn] [GuiIface.cc:120] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-user'
+(1684595325 866115370) No spacenav daemon found. Spacenav functionality is disabled
+(1684595325 962143487) Triangle input has a count of zero. This is likely not desired
+(1684595325 962267390) Triangle input has a count of zero. This is likely not desired
+(1684595325 982645539) [Wrn] [ColladaLoader.cc:1441] emission texture not supported

@@ -1,0 +1,5 @@
+[INFO] [1683618432.045398210] [gazebo_ros_node]: ROS was initialized without arguments.
+[INFO] [1683618432.177752241] [simple_rover_diff_drive]: Wheel pair 1 separation set to [0.520000m]
+[INFO] [1683618432.178151751] [simple_rover_diff_drive]: Wheel pair 1 diameter set to [0.280000m]
+[INFO] [1683618432.185803834] [simple_rover_diff_drive]: Subscribed to [/cmd_vel]
+[INFO] [1683620078.989232712] [rclcpp]: signal_handler(signum=2)

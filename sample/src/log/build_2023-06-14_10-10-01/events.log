@@ -1,0 +1,136 @@
+[0.000000] (-) TimerEvent: {}
+[0.000544] (rover_line_follower) JobQueued: {'identifier': 'rover_line_follower', 'dependencies': OrderedDict()}
+[0.000640] (simple_rover) JobQueued: {'identifier': 'simple_rover', 'dependencies': OrderedDict([('rover_line_follower', '/home/shh/final_project/src/install/rover_line_follower')])}
+[0.000708] (rover_line_follower) JobStarted: {'identifier': 'rover_line_follower'}
+[0.099008] (-) TimerEvent: {}
+[0.199259] (-) TimerEvent: {}
+[0.299525] (-) TimerEvent: {}
+[0.399923] (-) TimerEvent: {}
+[0.463367] (rover_line_follower) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/rover_line_follower', 'build', '--build-base', '/home/shh/final_project/src/build/rover_line_follower/build', 'install', '--record', '/home/shh/final_project/src/build/rover_line_follower/install.log', '--single-version-externally-managed'], 'cwd': '/home/shh/final_project/src/rover_line_follower', 'env': {'HOSTNAME': 'shh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/user', 'OLDPWD': '/home/shh/final_project', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/home/shh/final_project/src/build/rover_line_follower', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/shh/final_project/src/build/rover_line_follower/prefix_override:/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.500047] (-) TimerEvent: {}
+[0.600416] (-) TimerEvent: {}
+[0.610404] (rover_line_follower) StdoutLine: {'line': b'running egg_info\n'}
+[0.610789] (rover_line_follower) StdoutLine: {'line': b'creating ../build/rover_line_follower/rover_line_follower.egg-info\n'}
+[0.611057] (rover_line_follower) StdoutLine: {'line': b'writing ../build/rover_line_follower/rover_line_follower.egg-info/PKG-INFO\n'}
+[0.611283] (rover_line_follower) StdoutLine: {'line': b'writing dependency_links to ../build/rover_line_follower/rover_line_follower.egg-info/dependency_links.txt\n'}
+[0.611444] (rover_line_follower) StdoutLine: {'line': b'writing entry points to ../build/rover_line_follower/rover_line_follower.egg-info/entry_points.txt\n'}
+[0.611570] (rover_line_follower) StdoutLine: {'line': b'writing requirements to ../build/rover_line_follower/rover_line_follower.egg-info/requires.txt\n'}
+[0.611693] (rover_line_follower) StdoutLine: {'line': b'writing top-level names to ../build/rover_line_follower/rover_line_follower.egg-info/top_level.txt\n'}
+[0.611816] (rover_line_follower) StdoutLine: {'line': b"writing manifest file '../build/rover_line_follower/rover_line_follower.egg-info/SOURCES.txt'\n"}
+[0.612313] (rover_line_follower) StdoutLine: {'line': b"reading manifest file '../build/rover_line_follower/rover_line_follower.egg-info/SOURCES.txt'\n"}
+[0.612765] (rover_line_follower) StdoutLine: {'line': b"writing manifest file '../build/rover_line_follower/rover_line_follower.egg-info/SOURCES.txt'\n"}
+[0.612978] (rover_line_follower) StdoutLine: {'line': b'running build\n'}
+[0.613121] (rover_line_follower) StdoutLine: {'line': b'running build_py\n'}
+[0.613331] (rover_line_follower) StdoutLine: {'line': b'creating /home/shh/final_project/src/build/rover_line_follower/build\n'}
+[0.613514] (rover_line_follower) StdoutLine: {'line': b'creating /home/shh/final_project/src/build/rover_line_follower/build/lib\n'}
+[0.613649] (rover_line_follower) StdoutLine: {'line': b'creating /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower\n'}
+[0.613799] (rover_line_follower) StdoutLine: {'line': b'copying rover_line_follower/rover_line_follower.py -> /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower\n'}
+[0.614034] (rover_line_follower) StdoutLine: {'line': b'copying rover_line_follower/__init__.py -> /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower\n'}
+[0.614160] (rover_line_follower) StdoutLine: {'line': b'running install\n'}
+[0.614284] (rover_line_follower) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[0.614510] (rover_line_follower) StderrLine: {'line': b'  warnings.warn(\n'}
+[0.614636] (rover_line_follower) StdoutLine: {'line': b'running install_lib\n'}
+[0.614810] (rover_line_follower) StdoutLine: {'line': b'creating /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower\n'}
+[0.614940] (rover_line_follower) StdoutLine: {'line': b'copying /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower/rover_line_follower.py -> /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower\n'}
+[0.615067] (rover_line_follower) StdoutLine: {'line': b'copying /home/shh/final_project/src/build/rover_line_follower/build/lib/rover_line_follower/__init__.py -> /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower\n'}
+[0.615192] (rover_line_follower) StdoutLine: {'line': b'byte-compiling /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower/rover_line_follower.py to rover_line_follower.cpython-310.pyc\n'}
+[0.615577] (rover_line_follower) StdoutLine: {'line': b'byte-compiling /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower/__init__.py to __init__.cpython-310.pyc\n'}
+[0.615741] (rover_line_follower) StdoutLine: {'line': b'running install_data\n'}
+[0.616038] (rover_line_follower) StdoutLine: {'line': b'creating /home/shh/final_project/src/install/rover_line_follower/share/ament_index\n'}
+[0.616177] (rover_line_follower) StdoutLine: {'line': b'creating /home/shh/final_project/src/install/rover_line_follower/share/ament_index/resource_index\n'}
+[0.616308] (rover_line_follower) StdoutLine: {'line': b'creating /home/shh/final_project/src/install/rover_line_follower/share/ament_index/resource_index/packages\n'}
+[0.616436] (rover_line_follower) StdoutLine: {'line': b'copying resource/rover_line_follower -> /home/shh/final_project/src/install/rover_line_follower/share/ament_index/resource_index/packages\n'}
+[0.616621] (rover_line_follower) StdoutLine: {'line': b'copying package.xml -> /home/shh/final_project/src/install/rover_line_follower/share/rover_line_follower\n'}
+[0.616752] (rover_line_follower) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.617107] (rover_line_follower) StdoutLine: {'line': b'Copying ../build/rover_line_follower/rover_line_follower.egg-info to /home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages/rover_line_follower-0.0.0-py3.10.egg-info\n'}
+[0.617645] (rover_line_follower) StdoutLine: {'line': b'running install_scripts\n'}
+[0.632357] (rover_line_follower) StdoutLine: {'line': b'Installing rover_line_follower script to /home/shh/final_project/src/install/rover_line_follower/lib/rover_line_follower\n'}
+[0.632624] (rover_line_follower) StdoutLine: {'line': b"writing list of installed files to '/home/shh/final_project/src/build/rover_line_follower/install.log'\n"}
+[0.655756] (rover_line_follower) CommandEnded: {'returncode': 0}
+[0.675698] (rover_line_follower) JobEnded: {'identifier': 'rover_line_follower', 'rc': 0}
+[0.677096] (simple_rover) JobStarted: {'identifier': 'simple_rover'}
+[0.681560] (simple_rover) JobProgress: {'identifier': 'simple_rover', 'progress': 'cmake'}
+[0.681977] (simple_rover) Command: {'cmd': ['/usr/bin/cmake', '/home/shh/final_project/src/simple_rover', '-DCMAKE_INSTALL_PREFIX=/home/shh/final_project/src/install/simple_rover'], 'cwd': '/home/shh/final_project/src/build/simple_rover', 'env': OrderedDict([('HOSTNAME', 'shh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/shh/final_project'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/shh/final_project/src/install/rover_line_follower:/opt/ros/humble'), ('PWD', '/home/shh/final_project/src/build/simple_rover'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.700531] (-) TimerEvent: {}
+[0.800883] (-) TimerEvent: {}
+[0.846900] (simple_rover) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.3.0\n'}
+[0.901233] (-) TimerEvent: {}
+[0.954922] (simple_rover) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.3.0\n'}
+[0.966476] (simple_rover) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.001446] (-) TimerEvent: {}
+[1.041737] (simple_rover) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.054196] (simple_rover) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.054402] (simple_rover) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.054825] (simple_rover) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.058257] (simple_rover) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.101576] (-) TimerEvent: {}
+[1.124105] (simple_rover) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.134927] (simple_rover) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.135285] (simple_rover) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.135513] (simple_rover) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.142361] (simple_rover) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.201721] (-) TimerEvent: {}
+[1.302121] (-) TimerEvent: {}
+[1.319863] (simple_rover) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter \n'}
+[1.402269] (-) TimerEvent: {}
+[1.421575] (simple_rover) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.478918] (simple_rover) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.482946] (simple_rover) StdoutLine: {'line': b'-- Generating done\n'}
+[1.483472] (simple_rover) StdoutLine: {'line': b'-- Build files have been written to: /home/shh/final_project/src/build/simple_rover\n'}
+[1.486818] (simple_rover) CommandEnded: {'returncode': 0}
+[1.487678] (simple_rover) JobProgress: {'identifier': 'simple_rover', 'progress': 'build'}
+[1.489315] (simple_rover) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/shh/final_project/src/build/simple_rover', '--', '-j16', '-l16'], 'cwd': '/home/shh/final_project/src/build/simple_rover', 'env': OrderedDict([('HOSTNAME', 'shh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/shh/final_project'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/shh/final_project/src/install/rover_line_follower:/opt/ros/humble'), ('PWD', '/home/shh/final_project/src/build/simple_rover'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.502389] (-) TimerEvent: {}
+[1.528740] (simple_rover) CommandEnded: {'returncode': 0}
+[1.549190] (simple_rover) JobProgress: {'identifier': 'simple_rover', 'progress': 'install'}
+[1.560691] (simple_rover) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/shh/final_project/src/build/simple_rover'], 'cwd': '/home/shh/final_project/src/build/simple_rover', 'env': OrderedDict([('HOSTNAME', 'shh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/shh/final_project'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/home/shh/final_project/src/install/rover_line_follower:/opt/ros/humble'), ('PWD', '/home/shh/final_project/src/build/simple_rover'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/shh/final_project/src/install/rover_line_follower/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.570336] (simple_rover) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.570590] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch\n'}
+[1.570746] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/urdf.launch.py\n'}
+[1.570962] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/sdf.launch.py\n'}
+[1.571196] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/robot_state_publisher.launch.py\n'}
+[1.571389] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/display.launch.py\n'}
+[1.571607] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/launch/line_follower.launch.py\n'}
+[1.571811] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/rviz\n'}
+[1.571985] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/rviz/urdf.rviz\n'}
+[1.572158] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf\n'}
+[1.572305] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf/simple_rover.urdf.xacro\n'}
+[1.572468] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/urdf/camera.gazebo.xacro\n'}
+[1.572600] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds\n'}
+[1.572756] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds/simplerover_sdf.world\n'}
+[1.572908] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/worlds/track.world\n'}
+[1.573051] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models\n'}
+[1.573224] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track\n'}
+[1.573410] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/model.config\n'}
+[1.573544] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/model.sdf\n'}
+[1.573713] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials\n'}
+[1.573914] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/scripts\n'}
+[1.574096] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/scripts/track.material\n'}
+[1.574250] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures\n'}
+[1.574375] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/original_track.png\n'}
+[1.574499] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track01.png\n'}
+[1.574624] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1_2.png\n'}
+[1.574748] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track12.png\n'}
+[1.574870] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1.png\n'}
+[1.575015] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track1 copy.png\n'}
+[1.575165] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track3.png\n'}
+[1.575401] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/models/track/materials/textures/track2 copy.png\n'}
+[1.575553] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/package_run_dependencies/simple_rover\n'}
+[1.575865] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/parent_prefix_path/simple_rover\n'}
+[1.576555] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/ament_prefix_path.sh\n'}
+[1.580197] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/ament_prefix_path.dsv\n'}
+[1.580436] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/path.sh\n'}
+[1.580603] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/environment/path.dsv\n'}
+[1.580976] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.bash\n'}
+[1.581090] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.sh\n'}
+[1.581269] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.zsh\n'}
+[1.581378] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/local_setup.dsv\n'}
+[1.581486] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/package.dsv\n'}
+[1.581595] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/ament_index/resource_index/packages/simple_rover\n'}
+[1.581807] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/cmake/simple_roverConfig.cmake\n'}
+[1.581969] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/cmake/simple_roverConfig-version.cmake\n'}
+[1.582080] (simple_rover) StdoutLine: {'line': b'-- Installing: /home/shh/final_project/src/install/simple_rover/share/simple_rover/package.xml\n'}
+[1.582189] (simple_rover) CommandEnded: {'returncode': 0}
+[1.602472] (-) TimerEvent: {}
+[1.632703] (simple_rover) JobEnded: {'identifier': 'simple_rover', 'rc': 0}
+[1.633329] (-) EventReactorShutdown: {}

@@ -1,0 +1,34 @@
+[0.012s] Invoking command in '/home/user/nanosaur/build/nanosaur_gazebo': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_gazebo:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_gazebo -- -j16 -l16
+[0.052s] Invoked command in '/home/user/nanosaur/build/nanosaur_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_gazebo:/opt/ros/humble /usr/bin/cmake --build /home/user/nanosaur/build/nanosaur_gazebo -- -j16 -l16
+[0.079s] Invoking command in '/home/user/nanosaur/build/nanosaur_gazebo': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_gazebo:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_gazebo
+[0.088s] -- Install configuration: ""
+[0.088s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch
+[0.088s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch/gazebo.launch.py
+[0.088s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/launch/robot_state_publisher.launch.py
+[0.088s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf
+[0.088s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors
+[0.088s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/wide.gazebo.xacro
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/realsense.gazebo.xacro
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/zed.gazebo.xacro
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/camera.gazebo.xacro
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/sensors/imu.gazebo.xacro
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/diff_drive.gazebo.xacro
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/nanosaur.gazebo.xacro
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/nanosaur.gazebo.sdf
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/urdf/nanosaur.gazebo.urdf
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/package_run_dependencies/nanosaur_gazebo
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/parent_prefix_path/nanosaur_gazebo
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/ament_prefix_path.sh
+[0.089s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/ament_prefix_path.dsv
+[0.090s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/path.sh
+[0.090s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/environment/path.dsv
+[0.090s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.bash
+[0.090s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.sh
+[0.090s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.zsh
+[0.090s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/local_setup.dsv
+[0.090s] -- Installing: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/package.dsv
+[0.091s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/ament_index/resource_index/packages/nanosaur_gazebo
+[0.091s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/cmake/nanosaur_gazeboConfig.cmake
+[0.091s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/cmake/nanosaur_gazeboConfig-version.cmake
+[0.091s] -- Up-to-date: /home/user/nanosaur/install/nanosaur_gazebo/share/nanosaur_gazebo/package.xml
+[0.095s] Invoked command in '/home/user/nanosaur/build/nanosaur_gazebo' returned '0': CMAKE_PREFIX_PATH=/home/user/nanosaur/install/nanosaur_description:/home/user/nanosaur/install/nanosaur_control:/home/user/nanosaur/install/nanosaur_worlds:/home/user/nanosaur/install/nanosaur_simulations:/home/user/nanosaur/install/nanosaur:/home/user/nanosaur/install/nanosaur_msgs:/home/user/nanosaur/install/nanosaur_gazebo:/opt/ros/humble /usr/bin/cmake --install /home/user/nanosaur/build/nanosaur_gazebo

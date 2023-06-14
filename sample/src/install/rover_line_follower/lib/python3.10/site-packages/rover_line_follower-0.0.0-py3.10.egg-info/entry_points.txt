@@ -1,0 +1,3 @@
+[console_scripts]
+rover_line_follower = rover_line_follower.rover_line_follower:main
+

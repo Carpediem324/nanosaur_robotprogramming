@@ -1,0 +1,3 @@
+1684595849.7248178 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-20-15-17-29-724215-shh-6156
+1684595849.7249269 [INFO] [launch]: Default logging verbosity is set to INFO
+1684595850.4490771 [ERROR] [launch]: Caught exception in launch (see debug for traceback): "package 'image_viewer' not found, searching: ['/home/user/nanosaur/install/nanosaur_worlds', '/home/user/nanosaur/install/nanosaur_simulations', '/home/user/nanosaur/install/nanosaur', '/home/user/nanosaur/install/nanosaur_msgs', '/home/user/nanosaur/install/nanosaur_gazebo', '/home/user/nanosaur/install/nanosaur_description', '/home/user/nanosaur/install/nanosaur_control', '/opt/ros/humble']"

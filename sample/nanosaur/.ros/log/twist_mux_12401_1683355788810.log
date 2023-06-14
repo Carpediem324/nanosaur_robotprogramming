@@ -1,0 +1,8 @@
+[INFO] [1683355788.819918580] [nanosaur.twist_mux]: Topic handler 'topics.joystick' subscribed to topic 'joy_vel': timeout = 0.500000s , priority = 100.
+[INFO] [1683355788.821036121] [nanosaur.twist_mux]: Topic handler 'topics.keyboard' subscribed to topic 'key_vel': timeout = 0.500000s , priority = 90.
+[INFO] [1683355788.821284415] [nanosaur.twist_mux]: Topic handler 'topics.navigation' subscribed to topic 'nav_vel': timeout = 0.500000s , priority = 10.
+[INFO] [1683355788.821488883] [nanosaur.twist_mux]: Topic handler 'topics.tablet' subscribed to topic 'tab_vel': timeout = 0.500000s , priority = 100.
+[INFO] [1683355788.821710608] [nanosaur.twist_mux]: Topic handler 'locks.joystick' subscribed to topic 'joy_priority': timeout = None , priority = 100.
+[INFO] [1683355788.822120553] [nanosaur.twist_mux]: Topic handler 'locks.loop_closure' subscribed to topic 'stop_closing_loop': timeout = None , priority = 200.
+[INFO] [1683355788.822347233] [nanosaur.twist_mux]: Topic handler 'locks.pause' subscribed to topic 'pause_navigation': timeout = None , priority = 100.
+[INFO] [1683355795.318091553] [rclcpp]: signal_handler(signum=2)

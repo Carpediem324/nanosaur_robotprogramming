@@ -1,0 +1,9 @@
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/uninstall.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/nanosaur_simulations_uninstall.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/test.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/edit_cache.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/rebuild_cache.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/list_install_components.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/install.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/install/local.dir
+/home/user/nanosaur/build/nanosaur_simulations/CMakeFiles/install/strip.dir

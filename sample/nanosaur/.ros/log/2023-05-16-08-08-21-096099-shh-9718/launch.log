@@ -1,0 +1,41 @@
+1684224501.0967071 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-16-08-08-21-096099-shh-9718
+1684224501.0968072 [INFO] [launch]: Default logging verbosity is set to INFO
+1684224501.3317144 [INFO] [robot_state_publisher-1]: process started with pid [9720]
+1684224501.3318636 [INFO] [joint_state_publisher_gui-2]: process started with pid [9722]
+1684224501.3319209 [INFO] [rviz2-3]: process started with pid [9724]
+1684224501.3538594 [robot_state_publisher-1] [INFO] [1684224501.353515884] [robot_state_publisher]: got segment NVIDIA_jetson
+1684224501.3540504 [robot_state_publisher-1] [INFO] [1684224501.353613392] [robot_state_publisher]: got segment base_front
+1684224501.3543744 [robot_state_publisher-1] [INFO] [1684224501.353619283] [robot_state_publisher]: got segment base_link
+1684224501.3544641 [robot_state_publisher-1] [INFO] [1684224501.353623401] [robot_state_publisher]: got segment base_rear
+1684224501.3545315 [robot_state_publisher-1] [INFO] [1684224501.353627137] [robot_state_publisher]: got segment board_expansion
+1684224501.3545954 [robot_state_publisher-1] [INFO] [1684224501.353631105] [robot_state_publisher]: got segment camera_board
+1684224501.3546579 [robot_state_publisher-1] [INFO] [1684224501.353634862] [robot_state_publisher]: got segment camera_optical_frame
+1684224501.3547218 [robot_state_publisher-1] [INFO] [1684224501.353638719] [robot_state_publisher]: got segment cover
+1684224501.3547885 [robot_state_publisher-1] [INFO] [1684224501.353642896] [robot_state_publisher]: got segment display_left
+1684224501.3548558 [robot_state_publisher-1] [INFO] [1684224501.353646703] [robot_state_publisher]: got segment display_right
+1684224501.3549380 [robot_state_publisher-1] [INFO] [1684224501.353650660] [robot_state_publisher]: got segment flap_bottom
+1684224501.3550057 [robot_state_publisher-1] [INFO] [1684224501.353654327] [robot_state_publisher]: got segment flap_top
+1684224501.3550708 [robot_state_publisher-1] [INFO] [1684224501.353658094] [robot_state_publisher]: got segment motor_board
+1684224501.3551335 [robot_state_publisher-1] [INFO] [1684224501.353661681] [robot_state_publisher]: got segment motor_left
+1684224501.3551953 [robot_state_publisher-1] [INFO] [1684224501.353665658] [robot_state_publisher]: got segment motor_right
+1684224501.3552568 [robot_state_publisher-1] [INFO] [1684224501.353669395] [robot_state_publisher]: got segment pb_holder
+1684224501.3553181 [robot_state_publisher-1] [INFO] [1684224501.353673041] [robot_state_publisher]: got segment power_bank
+1684224501.3553793 [robot_state_publisher-1] [INFO] [1684224501.353676668] [robot_state_publisher]: got segment slider_left
+1684224501.3554409 [robot_state_publisher-1] [INFO] [1684224501.353680355] [robot_state_publisher]: got segment slider_right
+1684224501.3555031 [robot_state_publisher-1] [INFO] [1684224501.353684032] [robot_state_publisher]: got segment sprocket_left
+1684224501.3555651 [robot_state_publisher-1] [INFO] [1684224501.353687808] [robot_state_publisher]: got segment sprocket_right
+1684224501.3556268 [robot_state_publisher-1] [INFO] [1684224501.353691425] [robot_state_publisher]: got segment track_left
+1684224501.3556883 [robot_state_publisher-1] [INFO] [1684224501.353695012] [robot_state_publisher]: got segment track_right
+1684224501.3557501 [robot_state_publisher-1] [INFO] [1684224501.353698718] [robot_state_publisher]: got segment wheel_left
+1684224501.3560076 [robot_state_publisher-1] [INFO] [1684224501.353702285] [robot_state_publisher]: got segment wheel_right
+1684224501.6255040 [joint_state_publisher_gui-2] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-user'
+1684224501.6717951 [joint_state_publisher_gui-2] [INFO] [1684224501.671510904] [joint_state_publisher_gui]: Waiting for robot_description to be published on the robot_description topic...
+1684224501.6902878 [joint_state_publisher_gui-2] [INFO] [1684224501.689719562] [joint_state_publisher_gui]: Centering
+1684224501.7729611 [joint_state_publisher_gui-2] [INFO] [1684224501.772617055] [joint_state_publisher_gui]: Centering
+1684224550.3082316 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1684224550.3097053 [robot_state_publisher-1] [INFO] [1684224550.308039897] [rclcpp]: signal_handler(signum=2)
+1684224550.3173904 [ERROR] [joint_state_publisher_gui-2]: process has died [pid 9722, exit code -2, cmd '/opt/ros/humble/lib/joint_state_publisher_gui/joint_state_publisher_gui --ros-args -r __node:=joint_state_publisher_gui'].
+1684224550.3176420 [INFO] [launch]: process[joint_state_publisher_gui-2] was required: shutting down launched system
+1684224550.4468551 [ERROR] [robot_state_publisher-1]: process has died [pid 9720, exit code -11, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args --params-file /tmp/launch_params_u74sc_e6'].
+1684224550.4741387 [INFO] [rviz2-3]: process has finished cleanly [pid 9724]
+1684224550.4746125 [INFO] [launch]: process[rviz2-3] was required: shutting down launched system

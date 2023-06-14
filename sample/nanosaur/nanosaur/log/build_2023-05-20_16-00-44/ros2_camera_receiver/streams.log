@@ -1,0 +1,26 @@
+[0.618s] Invoking command in '/home/user/nanosaur/src/ros2_camera_receiver': PYTHONPATH=/home/user/nanosaur/build/ros2_camera_receiver/prefix_override:/home/user/nanosaur/install/ros2_camera_receiver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ros2_camera_receiver build --build-base /home/user/nanosaur/build/ros2_camera_receiver/build install --record /home/user/nanosaur/build/ros2_camera_receiver/install.log --single-version-externally-managed
+[0.808s] running egg_info
+[0.809s] writing ../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info/PKG-INFO
+[0.809s] writing dependency_links to ../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info/dependency_links.txt
+[0.809s] writing entry points to ../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info/entry_points.txt
+[0.809s] writing requirements to ../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info/requires.txt
+[0.809s] writing top-level names to ../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info/top_level.txt
+[0.811s] reading manifest file '../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info/SOURCES.txt'
+[0.812s] writing manifest file '../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info/SOURCES.txt'
+[0.812s] running build
+[0.812s] running build_py
+[0.813s] copying ros2_camera_receiver/camera_image_subscriber.py -> /home/user/nanosaur/build/ros2_camera_receiver/build/lib/ros2_camera_receiver
+[0.813s] running install
+[0.813s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.813s]   warnings.warn(
+[0.814s] running install_lib
+[0.814s] copying /home/user/nanosaur/build/ros2_camera_receiver/build/lib/ros2_camera_receiver/camera_image_subscriber.py -> /home/user/nanosaur/install/ros2_camera_receiver/lib/python3.10/site-packages/ros2_camera_receiver
+[0.814s] byte-compiling /home/user/nanosaur/install/ros2_camera_receiver/lib/python3.10/site-packages/ros2_camera_receiver/camera_image_subscriber.py to camera_image_subscriber.cpython-310.pyc
+[0.815s] running install_data
+[0.815s] running install_egg_info
+[0.816s] removing '/home/user/nanosaur/install/ros2_camera_receiver/lib/python3.10/site-packages/ros2_camera_receiver-0.0.0-py3.10.egg-info' (and everything under it)
+[0.816s] Copying ../../build/ros2_camera_receiver/ros2_camera_receiver.egg-info to /home/user/nanosaur/install/ros2_camera_receiver/lib/python3.10/site-packages/ros2_camera_receiver-0.0.0-py3.10.egg-info
+[0.817s] running install_scripts
+[0.835s] Installing camera_image_subscriber script to /home/user/nanosaur/install/ros2_camera_receiver/lib/ros2_camera_receiver
+[0.835s] writing list of installed files to '/home/user/nanosaur/build/ros2_camera_receiver/install.log'
+[0.876s] Invoked command in '/home/user/nanosaur/src/ros2_camera_receiver' returned '0': PYTHONPATH=/home/user/nanosaur/build/ros2_camera_receiver/prefix_override:/home/user/nanosaur/install/ros2_camera_receiver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ros2_camera_receiver build --build-base /home/user/nanosaur/build/ros2_camera_receiver/build install --record /home/user/nanosaur/build/ros2_camera_receiver/install.log --single-version-externally-managed

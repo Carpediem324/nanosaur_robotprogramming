@@ -1,0 +1,4 @@
+source;share/nanosaur/local_setup.bash
+source;share/nanosaur/local_setup.dsv
+source;share/nanosaur/local_setup.sh
+source;share/nanosaur/local_setup.zsh

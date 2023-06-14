@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from nanosaur_msgs/msg/Eyes.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Header.idl"
+
+module nanosaur_msgs {
+  module msg {
+    module Eyes_Constants {
+      @verbatim (language="comment", text=
+        "Type eyes")
+      const int8 DEFAULT = 0;
+      const int8 SQUARE = 1;
+    };
+    @verbatim (language="comment", text=
+      "Message header")
+    struct Eyes {
+      std_msgs::msg::Header header;
+
+      int8 type;
+
+      @verbatim (language="comment", text=
+        "eyes position")
+      geometry_msgs::msg::Point position;
+    };
+  };
+};

@@ -1,0 +1,8 @@
+[INFO] [1684594104.128280305] [gazebo_ros_node]: ROS was initialized without arguments.
+[INFO] [1684594105.083991293] [camera_controller]: Publishing camera info to [/camera/camera_info]
+[INFO] [1684594105.110265146] [nanosaur.skid_steer_drive_controller]: Wheel pair 1 separation set to [0.400000m]
+[INFO] [1684594105.110318854] [nanosaur.skid_steer_drive_controller]: Wheel pair 1 diameter set to [0.030000m]
+[INFO] [1684594105.111759306] [nanosaur.skid_steer_drive_controller]: Subscribed to [/nanosaur/cmd_vel]
+[INFO] [1684594105.113936502] [nanosaur.skid_steer_drive_controller]: Advertise odometry on [/nanosaur/odom]
+[INFO] [1684594105.116421763] [nanosaur.skid_steer_drive_controller]: Publishing wheel transforms between [base_link], [sprocket_left_joint] and [sprocket_right_joint]
+[INFO] [1684594105.116463667] [nanosaur.skid_steer_drive_controller]: Publishing wheel transforms between [base_link], [wheel_left_joint] and [wheel_right_joint]

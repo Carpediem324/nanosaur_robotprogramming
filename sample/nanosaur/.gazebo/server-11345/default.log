@@ -1,0 +1,18 @@
+Gazebo multi-robot simulator, version 11.10.2
+Copyright (C) 2012 Open Source Robotics Foundation.
+Released under the Apache 2 License.
+http://gazebosim.org
+
+
+(1684598153 243861493) [Msg] Waiting for master.
+(1684598153 249455944) [Msg] Connected to gazebo master @ http://127.0.0.1:11345
+(1684598153 249507069) [Msg] Publicized address: 192.168.0.59
+(1684598153 648782382) [Msg] Loading world file [/home/user/nanosaur/install/nanosaur_worlds/share/nanosaur_worlds/worlds/lab.world]
+(1684598153 714280502) [Err] [OpenAL.cc:84] Unable to open audio device[default]
+ Audio will be disabled.
+(1684598153 885528491) [Wrn] [ColladaLoader.cc:1441] emission texture not supported
+(1684598153 888127887) Init world[lab]
+(1684598154 186703634) [Wrn] [msgs.cc:1842] Conversion of sensor type[wideanglecamera] not supported.
+(1684598154 655897379) [Wrn] [msgs.cc:1842] Conversion of sensor type[wideanglecamera] not supported.
+(1684598154 714317453) Triangle input has a count of zero. This is likely not desired
+(1684598154 714419702) Triangle input has a count of zero. This is likely not desired

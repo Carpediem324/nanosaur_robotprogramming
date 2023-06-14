@@ -1,0 +1,3 @@
+1683355035.2479110 [INFO] [launch]: All log files can be found below /home/user/.ros/log/2023-05-06-06-37-15-247477-stmoon-XPS-9320-8082
+1683355035.2479885 [INFO] [launch]: Default logging verbosity is set to INFO
+1683355035.2927065 [ERROR] [launch]: Caught exception in launch (see debug for traceback): 'int' object has no attribute 'get_launch_arguments_with_include_launch_description_actions'

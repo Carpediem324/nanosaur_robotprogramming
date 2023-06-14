@@ -1,0 +1,24 @@
+-- Install configuration: ""
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/launch
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/launch/twist_control.launch.py
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/launch/teleop.launch.py
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/twist_mux_locks.yaml
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/joystick.yaml
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/ps3.nanosaur.yml
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/config/twist_mux_topics.yaml
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/ament_index/resource_index/package_run_dependencies/nanosaur_control
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/ament_index/resource_index/parent_prefix_path/nanosaur_control
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/ament_prefix_path.sh
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/path.sh
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/environment/path.dsv
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.bash
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.sh
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.zsh
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/local_setup.dsv
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/package.dsv
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/ament_index/resource_index/packages/nanosaur_control
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/cmake/nanosaur_controlConfig.cmake
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/cmake/nanosaur_controlConfig-version.cmake
+-- Up-to-date: /home/user/nanosaur/install/nanosaur_control/share/nanosaur_control/package.xml
