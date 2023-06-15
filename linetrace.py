@@ -21,6 +21,9 @@ class LineFollower(Node):
             Twist,
             '/nanosaur/cmd_vel',
             10)
+        # 데스크탑용
+        cv2.namedWindow('line follower')
+        cv2.imshow('line follower', np.zeros((300,300), dtype=np.uint8))
 
     def image_callback(self, msg):
 
@@ -45,10 +48,19 @@ class LineFollower(Node):
 
             twist_msg = Twist()
             twist_msg.angular.z = -float(error) * 0.005
-            twist_msg.linear.x = 0.1
+            twist_msg.linear.x = 0.5
             self.cmd_vel_publisher.publish(twist_msg)
         else:
             self.stop_moving()
+        
+        # 데스크탑용
+        cv2.drawContours(roi, [largest_contour], 0, (0,0,255), 3)
+        cv2.imshow('line follower', roi)
+        
+        key = cv2.waitKey(1)
+        if key == 27: # ESC
+            cv2.destroyAllWindows()
+
 
     def stop_moving(self):
         twist_msg = Twist()
@@ -72,4 +84,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
