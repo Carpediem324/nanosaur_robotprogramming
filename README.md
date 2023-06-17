@@ -31,6 +31,10 @@ step6: run your node
 
 
 
+https://github.com/Carpediem324/nanosaur_robotprogramming/assets/101110020/e20eb1de-4814-4ea4-95f9-7db27b503985
+
+
+
 
 
 ### 오류
