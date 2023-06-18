@@ -5,7 +5,6 @@ import numpy as np
 from rclpy.node import Node
 from .motor import Motor
 
-
 def gstreamer_pipeline(capture_width=640, capture_height=480, display_width=640, display_height=480, framerate=30, flip_method=0):
     return (
         "nvarguscamerasrc ! "
@@ -26,14 +25,12 @@ def gstreamer_pipeline(capture_width=640, capture_height=480, display_width=640,
         )
     )
 
-
 def find_black_regions(img):
     hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     lower_black = np.array([0, 0, 0])
     upper_black = np.array([180, 255, 100])
     mask = cv2.inRange(hsv_img, lower_black, upper_black)
     return mask
-
 
 class LineFollower(Node):
     def __init__(self):
@@ -50,8 +47,6 @@ class LineFollower(Node):
         self.rpm = 150
         self.mright = Motor(right_id, self.rpm)
         self.mleft = Motor(left_id, self.rpm)
-        self.corner_state = "STRAIGHT"
-        self.corner_timer = 0
 
     def timer_callback(self):
         ret_val, img = self.cap.read()
@@ -62,46 +57,40 @@ class LineFollower(Node):
     def process_image_and_move(self, img):
         black_regions = find_black_regions(img)
         height, width = black_regions.shape
+        left_area = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 1/3)]
+        center_area = black_regions[:, int(width * 1/3):int(width * 2/3)]
+        right_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):]
 
-        # Update corner status
-        if self.corner_state == "TURNING":
-            self.corner_timer -= 1
-            if self.corner_timer <= 0:
-                self.corner_state = "STRAIGHT"
+        edge_weight = 15
 
-        # Split the frame into three areas
-        left_area = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 1 / 3)]
-        center_area = black_regions[:, int(width * 1 / 3):int(width * 2 / 3)]
-        right_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2 / 3):]
-
-        # Calculate the sum
-        left_sum = left_area.sum()
-        center_sum = center_area.sum()
-        right_sum = right_area.sum()
+        left_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 0.1):int(width * 1/3)]
+        right_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):int(width * 0.9)]
 
         linear_velocity = 0.0
         angular_velocity = 0.0
 
-        # Corner Detection
-        if self.corner_state == "STRAIGHT" and (left_sum > 100000 or right_sum > 100000):
-            self.corner_state = "TURNING"
-            self.corner_timer = 100
-            if left_sum > right_sum:
-                angular_velocity = 0.8
-            else:
-                angular_velocity = -0.8
-
-            linear_velocity = 0.15
-
-        # Straight Line
-        elif center_sum > left_sum and center_sum > right_sum:
+        if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
             linear_velocity = 0.5
             angular_velocity = 0.0
-
-        # Turning (after corner)
+        elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
+            z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
+            if z_compensation > 0.1:  # 왼쪽 코너 구간
+                linear_velocity = 0.15
+                angular_velocity = 0.5 + z_compensation * 0.8
+            else:  # 직진
+                linear_velocity = 0.5
+                angular_velocity = 0.0
+        elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
+            z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
+            if z_compensation > 0.1:  # 오른쪽 코너 구간
+                linear_velocity = 0.15
+                angular_velocity = -0.5 - z_compensation * 0.8
+            else:  # 직진
+                linear_velocity = 0.5
+                angular_velocity = 0.0
         else:
-            angular_velocity = 0.5 * np.sign(right_sum - left_sum)
-            linear_velocity = 0.15
+            linear_velocity = 0.0
+            angular_velocity = 0.0
 
         cv2.imshow("Processed Image", black_regions)
         cv2.waitKey(1)
@@ -123,7 +112,6 @@ class LineFollower(Node):
         self.mright.set_speed(rpmr)
         self.mleft.set_speed(rpml)
 
-
 def main(args=None):
     rclpy.init(args=args)
     line_follower = LineFollower()
@@ -133,7 +121,6 @@ def main(args=None):
     line_follower.cap.release()
     line_follower.destroy_node()
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()
