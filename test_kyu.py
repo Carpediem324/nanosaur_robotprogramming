@@ -38,7 +38,7 @@ class LineFollower(Node):
         self.cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
         self.timer_period = 0.01
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
- 
+
         self.radius = 0.0105
         self.wheel_separation = 0.086
 
@@ -52,8 +52,9 @@ class LineFollower(Node):
         ret_val, img = self.cap.read()
         if ret_val:
             linear_velocity, angular_velocity = self.process_image_and_move(img)
+            linear_velocity = 0.3  # 원하는 이동 속도로 변경
             self.control_motors(linear_velocity, angular_velocity)
-      
+
     def process_image_and_move(self, img):
         black_regions = find_black_regions(img)
         height, width = black_regions.shape
@@ -69,21 +70,20 @@ class LineFollower(Node):
         linear_velocity = 0.0
         angular_velocity = 0.0
 
-        # Check if a corner is detected
-        corner_detected = left_edge.sum() * edge_weight > center_area.sum() * 0.5 and right_edge.sum() * edge_weight > center_area.sum() * 0.5
-
-        if not corner_detected:
-            if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
-                linear_velocity = 0.5
-                angular_velocity = 0.0
-            elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
-                z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
-                linear_velocity = 0.15
-                angular_velocity = 0.5 + z_compensation
-            elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
-                z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
-                linear_velocity = 0.15
-                angular_velocity = -0.5 - z_compensation
+        if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
+            linear_velocity = 0.5
+            angular_velocity = 0.0
+        elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
+            z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
+            linear_velocity = 0.15
+            angular_velocity = 0.5 + z_compensation * 0.8  # 코너 회전 위치 조정
+        elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
+            z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
+            linear_velocity = 0.15
+            angular_velocity = -0.5 - z_compensation * 0.8  # 코너 회전 위치 조정
+        else:
+            linear_velocity = 0.0
+            angular_velocity = 0.0
 
         cv2.imshow("Processed Image", black_regions)
         cv2.waitKey(1)
