@@ -58,7 +58,7 @@ class LineFollower(Node):
         black_regions = find_black_regions(img)
         height, width = black_regions.shape
         left_area = black_regions[int(height * 0.6):int(height * 0.8), :int(width * 1/3)]
-        center_area = black_regions[int(height * 0.4):, int(width * 1/3):int(width * 2/3)]
+        center_area = black_regions[int(height * 0.3):, int(width * 1/3):int(width * 2/3)]
         right_area = black_regions[int(height * 0.6):int(height * 0.8), int(width * 2/3):]
 
         edge_weight = 15
