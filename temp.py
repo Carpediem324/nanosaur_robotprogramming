@@ -104,7 +104,8 @@ class LineFollower(Node):
 
 
 def find_center(bin_image):
-    contours, _ = cv2.findContours(bin_image, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(bin_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    cv2.drawContours(out, contours, -1, (255, 255, 0), 1)
 
     center_points = []
     for contour in contours:
