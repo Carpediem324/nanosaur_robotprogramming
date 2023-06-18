@@ -1,89 +1,95 @@
-import rclpy
-from rclpy.node import Node
-from sensor_msgs.msg import Image
-from geometry_msgs.msg import Twist
 import cv2
+import rclpy
+import time
+from rclpy.node import Node
+from sensor_msgs.msg import CameraInfo
+from geometry_msgs.msg import Twist
 import numpy as np
-from cv_bridge import CvBridge
+
+
+def gstreamer_pipeline(capture_width=640, capture_height=480, display_width=640, display_height=480, framerate=30,
+                       flip_method=0):
+    return (
+            "nvarguscamerasrc ! "
+            "video/x-raw(memory:NVMM), "
+            "width=(int)%d, height=(int)%d, "
+            "format=(string)NV12, framerate=(fraction)%d/1 ! "
+            "nvvidconv flip-method=%d ! "
+            "video/x-raw, width=(int)%d, height=(int)%d, format=(string)BGRx ! "
+            "videoconvert ! "
+            "video/x-raw, format=(string)BGR ! appsink"
+            % (
+                capture_width,
+                capture_height,
+                framerate,
+                flip_method,
+                display_width,
+                display_height,
+            )
+    )
+
+
+def find_black_regions(img):
+    hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    lower_black = np.array([0, 0, 0])
+    upper_black = np.array([180, 255, 100])  # Increase the value range to include gray tones
+    mask = cv2.inRange(hsv_img, lower_black, upper_black)
+    return mask
 
 
 class LineFollower(Node):
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__('line_follower')
+        self.cmd_vel_publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
+        self.cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
+        self.timer_period = 0.01
+        self.timer = self.create_timer(self.timer_period, self.timer_callback)
+        self.last_twist = None
 
-        self.cv_bridge = CvBridge()
+    def timer_callback(self):
+        ret_val, img = self.cap.read()
+        if ret_val:
+            self.process_image_and_move(img)
 
-        self.image_subscriber = self.create_subscription(
-            Image,
-            '/camera/image_raw',
-            self.image_callback,
-            10)
-        self.cmd_vel_publisher = self.create_publisher(
-            Twist,
-            '/cmd_vel',
-            10)
+    def process_image_and_move(self, img):
+        black_regions = find_black_regions(img)
+        height, width = black_regions.shape
+        center_bottom = black_regions[int(height * 0.75):, int(width * 0.45):int(width * 0.55)]
+        center_left = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 0.4)]
+        center_right = black_regions[int(height * 0.4):int(height * 0.6), int(width * 0.6):]
 
-        self.movement = {"STOP": (0, 0),
-                         "LEFT": (0.5, 0),
-                         "RIGHT": (-0.5, 0),
-                         "FORWARD": (0, 0.5)}
+        twist = Twist()
 
-    def image_callback(self, msg) -> None:
-        try:
-            image = self.cv_bridge.imgmsg_to_cv2(msg, 'mono8')
+        if center_left.sum() > center_bottom.sum() and center_left.sum() > center_right.sum():
+            # Turn left when the center-left is black
+            twist.linear.x = 0.0
+            twist.angular.z = 0.5
+        elif center_right.sum() > center_bottom.sum() and center_right.sum() > center_left.sum():
+            # Turn right when the center-right is black
+            twist.linear.x = 0.0
+            twist.angular.z = -0.5
+        else:
+            # 항상 직진
+            twist.linear.x = 1.0
+            twist.angular.z = 0.0
 
-        except Exception as e:
-            self.get_logger().error('Failed to convert imgmsg to cv2: ' + str(e))
-            return
+        if self.last_twist is None or (
+                twist.linear.x != self.last_twist.linear.x or twist.angular.z != self.last_twist.angular.z):
+            self.cmd_vel_publisher_.publish(twist)
+            self.last_twist = twist
+            time.sleep(0.1)
 
-        _, width = image.shape
-        _, binary = cv2.threshold(image, 30, 255, cv2.THRESH_BINARY_INV)
-        points = find_center(binary)
-
-        move = control_nanosaur(points, width)
-
-        dz, dx = self.movement[move]
-        twist_msg = Twist()
-        twist_msg.angular.z = dz
-        twist_msg.linear.x = dx
-        self.cmd_vel_publisher.publish(twist_msg)
-
-
-def find_center(binary_image) -> list:
-    contours, _ = cv2.findContours(binary_image, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-
-    center_points = []
-    for contour in contours:
-        M = cv2.moments(contour)
-
-        if M["m00"] != 0:
-            cx = int(M["m10"] / M["m00"])
-            cy = int(M["m01"] / M["m00"])
-            center_points.append((cx, cy))
-
-    return center_points
-
-
-def control_nanosaur(center_points, frame_width) -> str:
-    action = "STOP"
-    if center_points:
-        for point in center_points:
-            if point[0] < frame_width // 2 - 100:
-                action = "LEFT"
-            elif point[0] > frame_width // 2 + 100:
-                action = "RIGHT"
-            else:
-                action = "FORWARD"
-
-    return action
+        cv2.imshow("Processed Image", black_regions)
+        cv2.waitKey(1)
 
 
 def main(args=None):
     rclpy.init(args=args)
     line_follower = LineFollower()
+
     rclpy.spin(line_follower)
 
-    line_follower.stop_moving()
+    line_follower.cap.release()
     line_follower.destroy_node()
     rclpy.shutdown()
 
