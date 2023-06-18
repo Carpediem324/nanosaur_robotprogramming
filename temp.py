@@ -106,22 +106,24 @@ class LineFollower(Node):
 def find_center(bin_image):
     contours, _ = cv2.findContours(bin_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
-    center_points = {}
-    sum_x, sum_y = 0, 0
-    for contour in contours:
-        M = cv2.moments(contour)
+    if len(contours) > 0:
 
-        if M["m00"] != 0:
-            center_points['x'] = int(M["m10"] / M["m00"])
-            center_points['y'] = int(M["m01"] / M["m00"])
-            
-            sum_x += center_points['x']
-            sum_y += center_points['y']
-    
-    center_points['x'] = int(sum_x / len(contours))
-    center_points['y'] = int(sum_y / len(contours))
+        center_points = {}
+        sum_x, sum_y = 0, 0
+        for contour in contours:
+            M = cv2.moments(contour)
 
-    return center_points
+            if M["m00"] != 0:
+                center_points['x'] = int(M["m10"] / M["m00"])
+                center_points['y'] = int(M["m01"] / M["m00"])
+                
+                sum_x += center_points['x']
+                sum_y += center_points['y']
+        
+        center_points['x'] = int(sum_x / len(contours))
+        center_points['y'] = int(sum_y / len(contours))
+
+        return center_points
 
 
 def control_nanosaur(center_points, frame_width) -> str:
