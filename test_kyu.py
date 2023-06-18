@@ -4,6 +4,7 @@ import time
 import numpy as np
 from rclpy.node import Node
 from .motor import Motor
+import asyncio
 
 def gstreamer_pipeline(capture_width=640, capture_height=480, display_width=640, display_height=480, framerate=30, flip_method=0):
     return (
@@ -48,56 +49,56 @@ class LineFollower(Node):
         self.mright = Motor(right_id, self.rpm)
         self.mleft = Motor(left_id, self.rpm)
         
-        self.rotating = False
-        self.rotation_direction = 0  # 1 for right, -1 for left
-        
+        self.corner_detected = False
+
     def timer_callback(self):
         ret_val, img = self.cap.read()
         if ret_val:
             linear_velocity, angular_velocity = self.process_image_and_move(img)
             self.control_motors(linear_velocity, angular_velocity)
+            
+    async def rotate_90_degrees(self):
+        # 로봇을 제자리에서 90도 회전하게 하는 코드 (시계방향 회전)
+        rotation_duration = 1.5  # 실행할 회전 시간(초)
+        target_rpm = 100       # 회전 도중 각 바퀴에서 필요한 RPM
+        self.mright.set_speed(-target_rpm)
+        self.mleft.set_speed(target_rpm)
+
+        await asyncio.sleep(rotation_duration)
+
+        self.mright.set_speed(0)
+        self.mleft.set_speed(0)
+        self.corner_detected = False
 
     def process_image_and_move(self, img):
-        black_regions = find_black_regions(img)
-        height, width = black_regions.shape
-        left_area = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 1/3)]
-        center_area = black_regions[:, int(width * 1/3):int(width * 2/3)]
-        right_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):]
+        left_mask, right_mask = self.generate_masks()
+        img_points = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-        edge_weight = 15
+        left_points = cv2.bitwise_and(img_points, left_mask)
+        right_points = cv2.bitwise_and(img_points, right_mask)
 
-        left_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 0.1):int(width * 1/3)]
-        right_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):int(width * 0.9)]
+        left_edge = cv2.Canny(left_points, 100, 120)
+        right_edge = cv2.Canny(right_points, 100, 120)
 
-        linear_velocity = 0.0
-        angular_velocity = 0.0
+        edge_weight = 1.0 / (len(img_points)*len(img_points[0]))
+        threshold = 0.015
 
-        if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
-            linear_velocity = 0.5
-            angular_velocity = 0.0
-            self.rotating = False
-        elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
-            if not self.rotating:
-                self.rotating = True
-                self.rotation_direction = 1
+        if not self.corner_detected and right_edge.sum()*edge_weight > threshold and left_edge.sum()*edge_weight > threshold:
+            self.corner_detected = True
+            self.get_logger().info("Corner detected")
+            asyncio.run(self.rotate_90_degrees())
 
-            z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
-            linear_velocity = 0.15
-            angular_velocity = 0.5 + z_compensation * 0.8 * self.rotation_direction
-        elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
-            if not self.rotating:
-                self.rotating = True
-                self.rotation_direction = -1
-
-            z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
-            linear_velocity = 0.15
-            angular_velocity = -0.5 - z_compensation * 0.8 * self.rotation_direction
-        else:
+        if self.corner_detected:
             linear_velocity = 0.0
             angular_velocity = 0.0
+        else:
+            left_intensity = left_edge.sum()*edge_weight
+            right_intensity = right_edge.sum()*edge_weight
 
-        cv2.imshow("Processed Image", black_regions)
-        cv2.waitKey(1)
+            difference = right_intensity - left_intensity
+
+            linear_velocity = self.base_speed
+            angular_velocity = self.base_speed * difference * self.gain
 
         return linear_velocity, angular_velocity
 
