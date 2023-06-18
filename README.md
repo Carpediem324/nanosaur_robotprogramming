@@ -60,6 +60,7 @@ CMake Error at CMakeLists.txt:24 (find_package):
 
 ---
 
+```python
 
 ### 
 
@@ -130,3 +131,5 @@ def show_camera():
 
 if __name__ == "__main__":
     show_camera()
+
+```
