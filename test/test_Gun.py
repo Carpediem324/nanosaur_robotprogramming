@@ -121,11 +121,11 @@ def find_center(bin_image) -> dict:
 def control_nanosaur(center_points, frame_width) -> str:
     action = "STOP"
     if center_points:
-        if center_points['x'] >= frame_width * 2/3:
+        if center_points['x'] >= frame_width * 3/4:
             action = "LEFT"
-        elif center_points['x'] <= frame_width * 1/3:
+        elif center_points['x'] <= frame_width * 1/4:
             action = "RIGHT"
-        elif frame_width * 1/3 < center_points['x'] < frame_width * 2/3:
+        elif frame_width * 1/4 < center_points['x'] < frame_width * 3/4:
             action = "FORWARD"
 
     return action
