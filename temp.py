@@ -65,7 +65,7 @@ class LineFollower(Node):
         linear_velocity = 0.0
         angular_velocity = 0.0
 
-        move = control_nanosaur(points, width)
+        move = control_nanosaur(points)
 
         if move == "FORWARD":
             linear_velocity = 0.5
@@ -106,27 +106,33 @@ class LineFollower(Node):
 def find_center(bin_image):
     contours, _ = cv2.findContours(bin_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
-    center_points = []
+    center_points = {}
+    sum_x, sum_y = 0, 0
     for contour in contours:
         M = cv2.moments(contour)
 
         if M["m00"] != 0:
-            cx = int(M["m10"] / M["m00"])
-            cy = int(M["m01"] / M["m00"])
-            center_points.append((cx, cy))
+            center_points['x'] = int(M["m10"] / M["m00"])
+            center_points['y'] = int(M["m01"] / M["m00"])
+            
+            sum_x += center_points['x']
+            sum_y += center_points['y']
+    
+    center_points['x'] = int(sum_x / len(contours))
+    center_points['y'] = int(sum_y / len(contours))
 
     return center_points
 
 
-def control_nanosaur(center_points, frame_width) -> str:
+def control_nanosaur(center_points) -> str:
     action = "STOP"
     if center_points:
         for point in center_points:
-            if point[0] < frame_width // 2 - 100:
+            if point['x'] >= 120:
                 action = "LEFT"
-            elif point[0] > frame_width // 2 + 100:
+            elif point['x'] <= 40:
                 action = "RIGHT"
-            else:
+            elif 40 < point['x'] < 120:
                 action = "FORWARD"
 
     return action
