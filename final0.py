@@ -3,7 +3,7 @@ import rclpy
 import time
 import numpy as np
 from rclpy.node import Node
-from nanosaur_motors.motor import Motor
+from .motor import Motor
 
 def gstreamer_pipeline(capture_width=640, capture_height=480, display_width=640, display_height=480, framerate=30, flip_method=0):
     return (
