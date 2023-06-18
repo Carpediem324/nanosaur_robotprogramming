@@ -1,93 +1,128 @@
-import rclpy
-from rclpy.node import Node
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
 import cv2
-import numpy as np
-from geometry_msgs.msg import Twist
+import rclpy
 import time
+import numpy as np
+from rclpy.node import Node
+from .motor import Motor
+
+def gstreamer_pipeline(capture_width=640, capture_height=480, display_width=640, display_height=480, framerate=30, flip_method=0):
+    return (
+        "nvarguscamerasrc ! "
+        "video/x-raw(memory:NVMM), "
+        "width=(int)%d, height=(int)%d, "
+        "format=(string)NV12, framerate=(fraction)%d/1 ! "
+        "nvvidconv flip-method=%d ! "
+        "video/x-raw, width=(int)%d, height=(int)%d, format=(string)BGRx ! "
+        "videoconvert ! "
+        "video/x-raw, format=(string)BGR ! appsink"
+        % (
+            capture_width,
+            capture_height,
+            framerate,
+            flip_method,
+            display_width,
+            display_height,
+        )
+    )
+
+def find_black_regions(img):
+    hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    lower_black = np.array([0, 0, 0])
+    upper_black = np.array([180, 255, 100])
+    mask = cv2.inRange(hsv_img, lower_black, upper_black)
+    return mask
 
 class LineFollower(Node):
     def __init__(self):
         super().__init__('line_follower')
-        self.subscription = self.create_subscription(
-            Image,
-            '/camera/color/image_raw',
-            self.timer_callback,
-            10)
-        self.subscription  # Prevent unused variable warning
+        self.cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
+        self.timer_period = 0.01
+        self.timer = self.create_timer(self.timer_period, self.timer_callback)
 
-        self.publisher = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.radius = 0.0105
+        self.wheel_separation = 0.086
 
-        self.bridge = CvBridge()
+        left_id = 1
+        right_id = 2
+        self.rpm = 150
+        self.mright = Motor(right_id, self.rpm)
+        self.mleft = Motor(left_id, self.rpm)
         
-        self.direction = None  # None for uninitialized, 0 for center, 1 for left, -1 for right
-        self.threshold = 100  # Set a suitable threshold value
-        self.delay = 1  # Delay in seconds between direction changes
-
-    def timer_callback(self, msg):
-        try:
-            img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-        except Exception as e:
-            self.get_logger().info(str(e))
-            return
-
-        linear_velocity, angular_velocity, new_direction = self.process_image_and_move(img)
-
-        # Check if direction change is required and a sufficient delay has passed
-        if self.direction != new_direction and (self.direction is None or time.time() - self.direction_timestamp >= self.delay):
-            self.direction = new_direction
-            self.direction_timestamp = time.time()
-
-        # Control the motors
-        self.control_motors(linear_velocity, self.direction * angular_velocity)
+        self.rotating = False
+        self.rotation_direction = 0  # 1 for right, -1 for left
+        
+    def timer_callback(self):
+        ret_val, img = self.cap.read()
+        if ret_val:
+            linear_velocity, angular_velocity = self.process_image_and_move(img)
+            self.control_motors(linear_velocity, angular_velocity)
 
     def process_image_and_move(self, img):
-        lower_yellow = np.array([10, 10, 10])
-        upper_yellow = np.array([255, 255, 80])
-        mask = cv2.inRange(img, lower_yellow, upper_yellow)
+        black_regions = find_black_regions(img)
+        height, width = black_regions.shape
+        left_area = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 1/3)]
+        center_area = black_regions[:, int(width * 1/3):int(width * 2/3)]
+        right_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):]
 
-        height, width, _ = img.shape
-        top = int(2 * height / 5)
-        bottom = int(2 * height / 3)
+        edge_weight = 15
 
-        left_mask = mask[top:bottom, 0:int(width / 3)]
-        center_mask = mask[top:bottom, int(width / 3):int(2 * width / 3)]
-        right_mask = mask[top:bottom, int(2 * width / 3):width]
+        left_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 0.1):int(width * 1/3)]
+        right_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):int(width * 0.9)]
 
-        left_area = cv2.countNonZero(left_mask)
-        center_area = cv2.countNonZero(center_mask)
-        right_area = cv2.countNonZero(right_mask)
+        linear_velocity = 0.0
+        angular_velocity = 0.0
 
-        linear_velocity = 0.2
-        angular_velocity = 0.25
+        if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
+            linear_velocity = 0.5
+            angular_velocity = 0.0
+            self.rotating = False
+        elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
+            if not self.rotating:
+                self.rotating = True
+                self.rotation_direction = 1
 
-        # Determine the new direction based on the conditions
-        if center_area > left_area and center_area > right_area:
-            new_direction = 0
-        elif left_area > center_area and left_area > right_area:
-            new_direction = 1
-        elif right_area > center_area and right_area > left_area:
-            new_direction = -1
+            z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
+            linear_velocity = 0.15
+            angular_velocity = 0.5 + z_compensation * 0.8 * self.rotation_direction
+        elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
+            if not self.rotating:
+                self.rotating = True
+                self.rotation_direction = -1
+
+            z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
+            linear_velocity = 0.15
+            angular_velocity = -0.5 - z_compensation * 0.8 * self.rotation_direction
         else:
-            new_direction = 0
+            linear_velocity = 0.0
+            angular_velocity = 0.0
 
-        return linear_velocity, angular_velocity, new_direction
+        cv2.imshow("Processed Image", black_regions)
+        cv2.waitKey(1)
 
-    def control_motors(self, linear, angular):
-        twist = Twist()
-        twist.linear.x = linear
-        twist.angular.z = angular
-        self.publisher.publish(twist)
+        return linear_velocity, angular_velocity
+
+    def control_motors(self, linear_velocity, angular_velocity):
+        v = linear_velocity
+        w = angular_velocity
+        half_wheel_separation = self.wheel_separation / 2.
+        vr = v + half_wheel_separation * w
+        vl = v - half_wheel_separation * w
+        rr = vr / self.radius
+        rl = vl / self.radius
+        max_speed = self.rpm / 60
+        r = [max(-max_speed, min(max_speed, rr)), max(-max_speed, min(max_speed, rl))]
+        rpmr = r[0] * 60
+        rpml = r[1] * 60
+        self.mright.set_speed(rpmr)
+        self.mleft.set_speed(rpml)
 
 def main(args=None):
     rclpy.init(args=args)
-
     line_follower = LineFollower()
 
     rclpy.spin(line_follower)
 
-    # Destroy the node explicitly
+    line_follower.cap.release()
     line_follower.destroy_node()
     rclpy.shutdown()
 
