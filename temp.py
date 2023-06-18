@@ -53,33 +53,31 @@ class LineFollower(Node):
         if ret_val:
             linear_velocity, angular_velocity = self.process_image_and_move(img)
             self.control_motors(linear_velocity, angular_velocity)
-      
+    
     def process_image_and_move(self, img):
         black_regions = find_black_regions(img)
         height, width = black_regions.shape
-        left_area = black_regions[int(height * 0.6):int(height * 0.8), :int(width * 1/3)]
-        center_area = black_regions[int(height * 0.3):, int(width * 1/3):int(width * 2/3)]
-        right_area = black_regions[int(height * 0.6):int(height * 0.8), int(width * 2/3):]
+
+        points = find_center(black_regions)
 
         edge_weight = 15
-
-        left_edge = black_regions[int(height * 0.6):int(height * 0.8), int(width * 0.1):int(width * 1/3)]
-        right_edge = black_regions[int(height * 0.6):int(height * 0.8), int(width * 2/3):int(width * 0.9)]
 
         linear_velocity = 0.0
         angular_velocity = 0.0
 
-        if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
+        move = control_nanosaur(points, width)
+
+        if move == "FORWARD":
             linear_velocity = 0.5
             angular_velocity = 0.0
-        elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
-            z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
+        elif move == "LEFT":
+            # z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
             linear_velocity = 0.15
-            angular_velocity = 0.5 + z_compensation
-        elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
-            z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
+            angular_velocity = 0.5
+        elif move == "RIGHT":
+            # z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
             linear_velocity = 0.15
-            angular_velocity = -0.5 - z_compensation
+            angular_velocity = -0.5
         else:
             linear_velocity = 0.0
             angular_velocity = 0.0
@@ -103,6 +101,36 @@ class LineFollower(Node):
         rpml = r[1] * 60
         self.mright.set_speed(rpmr)
         self.mleft.set_speed(rpml)
+
+
+def find_center(bin_image):
+    contours, _ = cv2.findContours(bin_image, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+
+    center_points = []
+    for contour in contours:
+        M = cv2.moments(contour)
+
+        if M["m00"] != 0:
+            cx = int(M["m10"] / M["m00"])
+            cy = int(M["m01"] / M["m00"])
+            center_points.append((cx, cy))
+
+    return center_points
+
+
+def control_nanosaur(center_points, frame_width) -> str:
+    action = "STOP"
+    if center_points:
+        for point in center_points:
+            if point[0] < frame_width // 2 - 100:
+                action = "LEFT"
+            elif point[0] > frame_width // 2 + 100:
+                action = "RIGHT"
+            else:
+                action = "FORWARD"
+
+    return action
+
 
 def main(args=None):
     rclpy.init(args=args)
