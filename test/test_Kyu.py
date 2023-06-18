@@ -32,6 +32,26 @@ def find_black_regions(img):
     mask = cv2.inRange(hsv_img, lower_black, upper_black)
     return mask
 
+def is_corner_detected(img):
+    mask = find_black_regions(img)
+    height, width = mask.shape
+    left_area = mask[int(height * 0.4):int(height * 0.6), :int(width * 1/3)]
+    right_area = mask[int(height * 0.4):int(height * 0.6), int(width * 2/3):]
+
+    left_corner_threshold = 200000
+    right_corner_threshold = 200000
+    left_corner_detected = left_area.sum() > left_corner_threshold
+    right_corner_detected = right_area.sum() > right_corner_threshold
+
+    if left_corner_detected and right_corner_detected:
+        return 'none'
+    elif left_corner_detected:
+        return 'left'
+    elif right_corner_detected:
+        return 'right'
+    else:
+        return 'none'
+
 class LineFollower(Node):
     def __init__(self):
         super().__init__('line_follower')
@@ -47,72 +67,51 @@ class LineFollower(Node):
         self.rpm = 150
         self.mright = Motor(right_id, self.rpm)
         self.mleft = Motor(left_id, self.rpm)
-        
-        self.corner_detected = False
-        self.corner_pass_time = 0
 
     def timer_callback(self):
         ret_val, img = self.cap.read()
         if ret_val:
-            if self.corner_detected:
-                now = time.time()
-                if now - self.corner_pass_time >= 3: # 직진 후 회전 3초 기다리기
-                    self.corner_detected = False
-                    self.control_motors(0, 0) # 회전 세션 마지막에 정지
-                elif now - self.corner_pass_time >= 1: # 직진 1초 후 90도 회전
-                    self.control_motors(0, np.pi / 8) # 약 90도 회전 (속도 조절 필요)
-                else:
-                    self.control_motors(0.5, 0) # 직진 속도
-
-            else:
-                linear_velocity, angular_velocity, self.corner_detected = self.process_image_and_move(img)
-                if not self.corner_detected:
-                    self.control_motors(linear_velocity, angular_velocity)
-                else:
-                    self.corner_pass_time = time.time()
+            linear_velocity, angular_velocity, corner_direction = self.process_image_and_move(img)
+            self.control_motors(linear_velocity, angular_velocity, corner_direction)
 
     def process_image_and_move(self, img):
         black_regions = find_black_regions(img)
         height, width = black_regions.shape
-        left_area = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 1/3)]
         center_area = black_regions[:, int(width * 1/3):int(width * 2/3)]
-        right_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):]
-
+        
         edge_weight = 15
-
-        left_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 0.1):int(width * 1/3)]
-        right_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):int(width * 0.9)]
+        left_area = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 1/3)]
+        right_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):]
 
         linear_velocity = 0.0
         angular_velocity = 0.0
-        
-        # 코너 검출을 위한 추가 로직
-        corner_detected = False
-        
-        if left_edge.sum() * edge_weight >= black_regions.sum() * 0.5 and right_edge.sum() * edge_weight >= black_regions.sum() * 0.5:
-            corner_detected = True
+        corner_direction = is_corner_detected(img)
 
-        if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
-            linear_velocity = 0.5
-            angular_velocity = 0.0
-        elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
-            z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
-            linear_velocity = 0.15
-            angular_velocity = 0.5 + z_compensation * 0.8  # 코너 회전 위치 조정
-        elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
-            z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
-            linear_velocity = 0.15
-            angular_velocity = -0.5 - z_compensation * 0.8  # 코너 회전 위치 조정
+        if corner_direction == 'none':
+            if center_area.sum() > left_area.sum() + edge_weight and center_area.sum() > right_area.sum() + edge_weight:
+                linear_velocity = 0.5
+                angular_velocity = 0.0
+            elif left_area.sum() + edge_weight > center_area.sum() and left_area.sum() + edge_weight > right_area.sum() + edge_weight:
+                z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
+                linear_velocity = 0.15
+                angular_velocity = 0.5 + z_compensation * 0.8  # 코너 회전 위치 조정
+            elif right_area.sum() + edge_weight > center_area.sum() and right_area.sum() + edge_weight > left_area.sum() + edge_weight:
+                z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
+                linear_velocity = 0.15
+                angular_velocity = -0.5 - z_compensation * 0.8  # 코너 회전 위치 조정
+            else:
+                linear_velocity = 0.0
+                angular_velocity = 0.0
         else:
             linear_velocity = 0.0
-            angular_velocity = 0.0
+            if corner_direction == 'left':
+                angular_velocity = 5.0
+            elif corner_direction == 'right':
+                angular_velocity = -5.0
+                
+        return linear_velocity, angular_velocity, corner_direction
 
-        cv2.imshow("Processed Image", black_regions)
-        cv2.waitKey(1)
-
-        return linear_velocity, angular_velocity
-
-    def control_motors(self, linear_velocity, angular_velocity):
+    def control_motors(self, linear_velocity, angular_velocity, corner_direction):
         v = linear_velocity
         w = angular_velocity
         half_wheel_separation = self.wheel_separation / 2.
@@ -124,8 +123,17 @@ class LineFollower(Node):
         r = [max(-max_speed, min(max_speed, rr)), max(-max_speed, min(max_speed, rl))]
         rpmr = r[0] * 60
         rpml = r[1] * 60
-        self.mright.set_speed(rpmr)
-        self.mleft.set_speed(rpml)
+
+        if corner_direction == 'none':
+            self.mright.set_speed(rpmr)
+            self.mleft.set_speed(rpml)
+        else:
+            if angular_velocity != 0.0:
+                self.mright.set_speed(-rpmr)
+                self.mleft.set_speed(rpml)
+                time.sleep(1)  # Adjust this value to achieve a correct 90-degree turn
+            self.mright.set_speed(0)
+            self.mleft.set_speed(0)
 
 def main(args=None):
     rclpy.init(args=args)
