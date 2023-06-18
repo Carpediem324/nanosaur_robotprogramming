@@ -60,76 +60,34 @@ CMake Error at CMakeLists.txt:24 (find_package):
 
 ---
 
-```python
+Traceback (most recent call last):
+  File "/home/ubuntu/ros2_ws/install/nanosaur_hardware/lib/nanosaur_hardware/nanosaur", line 11, in <module>
+    load_entry_point('nanosaur-hardware', 'console_scripts', 'nanosaur')()
+  File "/home/ubuntu/ros2_ws/build/nanosaur_hardware/nanosaur_hardware/nanosaur.py", line 194, in main
+    rclpy.spin(nanosaur)
+  File "/opt/ros/eloquent/lib/python3.6/site-packages/rclpy/__init__.py", line 190, in spin
+    executor.spin_once()
+  File "/opt/ros/eloquent/lib/python3.6/site-packages/rclpy/executors.py", line 684, in spin_once
+    raise handler.exception()
+  File "/opt/ros/eloquent/lib/python3.6/site-packages/rclpy/task.py", line 239, in __call__
+    self._handler.send(None)
+  File "/opt/ros/eloquent/lib/python3.6/site-packages/rclpy/executors.py", line 404, in handler
+    await call_coroutine(entity, arg)
+  File "/opt/ros/eloquent/lib/python3.6/site-packages/rclpy/executors.py", line 330, in _execute_subscription
+    await await_or_execute(sub.callback, msg)
+  File "/opt/ros/eloquent/lib/python3.6/site-packages/rclpy/executors.py", line 118, in await_or_execute
+    return callback(*args)
+  File "/home/ubuntu/ros2_ws/build/nanosaur_hardware/nanosaur_hardware/nanosaur.py", line 173, in drive_callback
+    self.mright.set_speed(rpmr)
+  File "/home/ubuntu/ros2_ws/build/nanosaur_hardware/nanosaur_hardware/motor.py", line 48, in set_speed
+    self._motor.setSpeed(speed)
+  File "/usr/local/lib/python3.6/dist-packages/Adafruit_MotorHAT/Adafruit_MotorHAT_Motors.py", line 213, in setSpeed
+    self.MC._pwm.setPWM(self.PWMpin, 0, speed*16)
+  File "/usr/local/lib/python3.6/dist-packages/Adafruit_MotorHAT/Adafruit_PWM_Servo_Driver.py", line 88, in setPWM
+    self.i2c.write8(self.__LED0_ON_L+4*channel, on & 0xFF)
+  File "/usr/local/lib/python3.6/dist-packages/Adafruit_GPIO/I2C.py", line 114, in write8
+    self._bus.write_byte_data(self._address, register, value)
+  File "/usr/local/lib/python3.6/dist-packages/Adafruit_PureIO/smbus.py", line 316, in write_byte_data
+    self._device.write(data)
+OSError: [Errno 121] Remote I/O error
 
-### 
-
-# MIT License
-# Copyright (c) 2021 Kimsooyoung
-# See license
-# Using a CSI camera (such as the Raspberry Pi Version 2) connected to a
-# NVIDIA Jetson Nano Developer Kit using OpenCV
-# Drivers for the camera and OpenCV are included in the base image
-
-import cv2
-
-# gstreamer_pipeline returns a GStreamer pipeline for capturing from the CSI camera
-# Defaults to 1280x720 @ 60fps
-# Flip the image by setting the flip_method (most common values: 0 and 2)
-# display_width and display_height determine the size of the window on the screen
-
-
-def gstreamer_pipeline(
-    capture_width=1280,
-    capture_height=720,
-    display_width=1280,
-    display_height=720,
-    framerate=60,
-    flip_method=0,
-):
-    return (
-        "nvarguscamerasrc ! "
-        "video/x-raw(memory:NVMM), "
-        "width=(int)%d, height=(int)%d, "
-        "format=(string)NV12, framerate=(fraction)%d/1 ! "
-        "nvvidconv flip-method=%d ! "
-        "video/x-raw, width=(int)%d, height=(int)%d, format=(string)BGRx ! "
-        "videoconvert ! "
-        "video/x-raw, format=(string)BGR ! appsink"
-        % (
-            capture_width,
-            capture_height,
-            framerate,
-            flip_method,
-            display_width,
-            display_height,
-        )
-    )
-
-
-def show_camera():
-    # To flip the image, modify the flip_method parameter (0 and 2 are the most common)
-    cam_pipeline = gstreamer_pipeline(flip_method=2)
-    print(cam_pipeline)
-    cap = cv2.VideoCapture(cam_pipeline, cv2.CAP_GSTREAMER)
-    if cap.isOpened():
-        window_handle = cv2.namedWindow("CSI Camera", cv2.WINDOW_AUTOSIZE)
-        # Window
-        while cv2.getWindowProperty("CSI Camera", 0) >= 0:
-            ret_val, img = cap.read()
-            cv2.imshow("CSI Camera", img)
-            # This also acts as
-            keyCode = cv2.waitKey(30) & 0xFF
-            # Stop the program on the ESC key
-            if keyCode == 27:
-                break
-        cap.release()
-        cv2.destroyAllWindows()
-    else:
-        print("Unable to open camera")
-
-
-if __name__ == "__main__":
-    show_camera()
-
-```
