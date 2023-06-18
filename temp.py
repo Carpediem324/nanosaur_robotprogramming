@@ -65,7 +65,7 @@ class LineFollower(Node):
         linear_velocity = 0.0
         angular_velocity = 0.0
 
-        move = control_nanosaur(points)
+        move = control_nanosaur(points, width)
 
         if move == "FORWARD":
             linear_velocity = 0.5
@@ -124,15 +124,15 @@ def find_center(bin_image):
     return center_points
 
 
-def control_nanosaur(center_points) -> str:
+def control_nanosaur(center_points, frame_width) -> str:
     action = "STOP"
     if center_points:
         for point in center_points:
-            if point['x'] >= 120:
+            if point['x'] >= frame_width * 2/3:
                 action = "LEFT"
-            elif point['x'] <= 40:
+            elif point['x'] <= frame_width * 1/3:
                 action = "RIGHT"
-            elif 40 < point['x'] < 120:
+            elif frame_width * 1/3 < point['x'] < frame_width * 2/3:
                 action = "FORWARD"
 
     return action
