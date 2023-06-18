@@ -52,7 +52,8 @@ class LineFollower(Node):
         ret_val, img = self.cap.read()
         if ret_val:
             linear_velocity, angular_velocity = self.process_image_and_move(img)
-            self.control_motors(linear_velocity, angular_velocity)
+            if not corner_detected:  # 코너 회전이 아닌 경우에만 모터를 제어함
+                self.control_motors(linear_velocity, angular_velocity)
 
     def turn_90_degrees(self, direction):
         if direction == "left":
@@ -90,13 +91,15 @@ class LineFollower(Node):
         angular_velocity = 0.0
         
         # 코너 회전 구간 설정
-        corner_threshold = 10000  # 코너를 감지할 픽셀 개수 임계값 설정
+        corner_threshold = 12000  # 코너를 감지할 픽셀 개수 임계값 설정
 
-        # 코너를 감지한 경우
+        corner_detected = False
+
         if left_edge.sum() > corner_threshold or right_edge.sum() > corner_threshold:
+            corner_detected = True
 
             # 코너 끝까지 직진
-            moving_duration = 1.2  # 코너 끝까지 이동하는데 걸리는 시간
+            moving_duration = 1.2
             self.move_forward(moving_duration)
 
             # 제자리에서 90도 회전
