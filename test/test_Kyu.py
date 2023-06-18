@@ -32,26 +32,11 @@ def find_black_regions(img):
     mask = cv2.inRange(hsv_img, lower_black, upper_black)
     return mask
 
-class PID_Controller:
-    def __init__(self, Kp, Ki, Kd):
-        self.Kp = Kp
-        self.Ki = Ki
-        self.Kd = Kd
-        self.error_sum = 0
-        self.prev_error = 0
-
-    def update(self, error, dt):
-        self.error_sum += error * dt
-        d_error = (error - self.prev_error) / dt
-        self.prev_error = error
-        output = self.Kp * error + self.Ki * self.error_sum + self.Kd * d_error
-        return output
-
 class LineFollower(Node):
     def __init__(self):
         super().__init__('line_follower')
         self.cap = cv2.VideoCapture(gstreamer_pipeline(flip_method=2), cv2.CAP_GSTREAMER)
-        self.timer_period = 0.05
+        self.timer_period = 0.01
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
 
         self.radius = 0.0105
@@ -63,36 +48,41 @@ class LineFollower(Node):
         self.mright = Motor(right_id, self.rpm)
         self.mleft = Motor(left_id, self.rpm)
 
-        self.pid_controller = PID_Controller(Kp=0.25, Ki=0.001, Kd=0.02)
-        self.timeout = 0
-
     def timer_callback(self):
-        start_time = time.time()
         ret_val, img = self.cap.read()
         if ret_val:
             linear_velocity, angular_velocity = self.process_image_and_move(img)
             self.control_motors(linear_velocity, angular_velocity)
-        end_time = time.time()
-        dt = end_time - start_time
-        self.timeout = max(0, self.timer_period - dt)
 
     def process_image_and_move(self, img):
         black_regions = find_black_regions(img)
         height, width = black_regions.shape
-        center_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 1/3):int(width * 2/3)]
+        left_area = black_regions[int(height * 0.4):int(height * 0.6), :int(width * 1/3)]
+        center_area = black_regions[:, int(width * 1/3):int(width * 2/3)]
+        right_area = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):]
 
-        img_center = width // 2
-        M = cv2.moments(center_area)
-        if M["m00"] != 0:
-            cx = int(M["m10"] / M["m00"])
+        edge_weight = 20
+
+        left_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 0.1):int(width * 1/3)]
+        right_edge = black_regions[int(height * 0.4):int(height * 0.6), int(width * 2/3):int(width * 0.9)]
+
+        linear_velocity = 0.0
+        angular_velocity = 0.0
+
+        if center_area.sum() > left_area.sum() + left_edge.sum() * edge_weight and center_area.sum() > right_area.sum() + right_edge.sum() * edge_weight:
+            linear_velocity = 0.5
+            angular_velocity = 0.0
+        elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
+            z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
+            linear_velocity = 0.25
+            angular_velocity = 0.4 + z_compensation * 0.6  # 코너 회전 위치 조정
+        elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
+            z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
+            linear_velocity = 0.25
+            angular_velocity = -0.4 - z_compensation * 0.6  # 코너 회전 위치 조정
         else:
-            cx = img_center
-
-        error = img_center - cx
-        dt = self.timeout or self.timer_period
-        angular_velocity = self.pid_controller.update(error, dt)
-
-        linear_velocity = 0.3
+            linear_velocity = 0.0
+            angular_velocity = 0.0
 
         cv2.imshow("Processed Image", black_regions)
         cv2.waitKey(1)
@@ -126,3 +116,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
