@@ -72,11 +72,11 @@ class LineFollower(Node):
             angular_velocity = 0.0
         elif move == "LEFT":
             # z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
-            linear_velocity = 0.15
+            linear_velocity = 0.0
             angular_velocity = 0.5
         elif move == "RIGHT":
             # z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
-            linear_velocity = 0.15
+            linear_velocity = 0.0
             angular_velocity = -0.5
         else:
             linear_velocity = 0.0
