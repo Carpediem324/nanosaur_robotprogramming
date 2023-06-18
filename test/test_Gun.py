@@ -103,24 +103,17 @@ class LineFollower(Node):
         self.mleft.set_speed(rpml)
 
 
-def find_center(bin_image):
-    contours, _ = cv2.findContours(bin_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+def find_center(bin_image) -> dict:
+    contours, _ = cv2.findContours(bin_image, 1, cv2.CHAIN_APPROX_NONE)
 
     center_points = {}
     if len(contours) > 0:
-        sum_x, sum_y = 0, 0
-        for contour in contours:
-            M = cv2.moments(contour)
+        c = max(contours, key=cv2.contourArea)
+        M = cv2.moments(c)
 
-            if M["m00"] != 0:
-                center_points['x'] = int(M["m10"] / M["m00"])
-                center_points['y'] = int(M["m01"] / M["m00"])
-                
-                sum_x += center_points['x']
-                sum_y += center_points['y']
-        
-        center_points['x'] = int(sum_x / len(contours))
-        center_points['y'] = int(sum_y / len(contours))
+        if M["m00"] != 0:
+            center_points['x'] = int(M["m10"] / M["m00"])
+            center_points['y'] = int(M["m01"] / M["m00"])
 
     return center_points
 
