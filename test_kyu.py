@@ -51,9 +51,10 @@ class LineFollower(Node):
     def timer_callback(self):
         ret_val, img = self.cap.read()
         if ret_val:
-            linear_velocity, angular_velocity = self.process_image_and_move(img)
+            corner_detected, linear_velocity, angular_velocity = self.process_image_and_move(img)
             if not corner_detected:  # 코너 회전이 아닌 경우에만 모터를 제어함
                 self.control_motors(linear_velocity, angular_velocity)
+
 
     def turn_90_degrees(self, direction):
         if direction == "left":
