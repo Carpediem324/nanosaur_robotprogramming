@@ -74,7 +74,7 @@ class LineFollower(Node):
             angular_velocity = 0.0
         elif left_area.sum() + left_edge.sum() * edge_weight > center_area.sum() and left_area.sum() + left_edge.sum() * edge_weight > right_area.sum() + right_edge.sum() * edge_weight:
             z_compensation = (right_area.sum() - left_area.sum()) / (left_area.sum() + right_area.sum())
-            if z_compensation > 0.1:  # 왼쪽 코너 구간
+            if abs(z_compensation) > 0.1:  # 왼쪽 코너 구간
                 linear_velocity = 0.15
                 angular_velocity = 0.5 + z_compensation * 0.8
             else:  # 직진
@@ -82,7 +82,7 @@ class LineFollower(Node):
                 angular_velocity = 0.0
         elif right_area.sum() + right_edge.sum() * edge_weight > center_area.sum() and right_area.sum() + right_edge.sum() * edge_weight > left_area.sum() + left_edge.sum() * edge_weight:
             z_compensation = (left_area.sum() - right_area.sum()) / (left_area.sum() + right_area.sum())
-            if z_compensation > 0.1:  # 오른쪽 코너 구간
+            if abs(z_compensation) > 0.1:  # 오른쪽 코너 구간
                 linear_velocity = 0.15
                 angular_velocity = -0.5 - z_compensation * 0.8
             else:  # 직진
