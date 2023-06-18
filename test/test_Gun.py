@@ -56,7 +56,7 @@ class LineFollower(Node):
     
     def process_image_and_move(self, img):
         black_regions = find_black_regions(img)
-        height, width = black_regions.shape
+        height, width, _ = black_regions.shape
 
         points = find_center(black_regions)
 
