@@ -41,12 +41,12 @@ nanosaur가 카메라를 사용하여 선을 따라 이동하는 데 도움이 �
 - 코드 실행 시, LineFollower 인스턴스를 생성하고 rclpy.spin을 사용하여 지속적으로 작동합니다.
 - 사용자가 종료하거나 ESC를 누를 경우, 로봇은 이동을 중단하며 이 정보를 다른 노드로 알립니다.
 
-### 시뮬레이션 영상
-
-https://github.com/Carpediem324/nanosaur_robotprogramming/assets/101110020/e20eb1de-4814-4ea4-95f9-7db27b503985
-
----
-
 ![캡처 001](https://github.com/Carpediem324/nanosaur_robotprogramming/assets/128462226/ce373b57-8461-491b-8773-3e78efc5cbef)
 
 ![캡처 002](https://github.com/Carpediem324/nanosaur_robotprogramming/assets/128462226/d3f5284c-8f6c-44bb-95bf-0ac7638a96d5)
+
+---
+
+### 시뮬레이션 영상
+
+https://github.com/Carpediem324/nanosaur_robotprogramming/assets/101110020/e20eb1de-4814-4ea4-95f9-7db27b503985
