@@ -48,5 +48,10 @@ nanosaur가 카메라를 사용하여 선을 따라 이동하는 데 도움이 �
 ---
 
 ### 시뮬레이션 영상
+This video is use the code "Linetrace_for_gazebo_sim.py"
+이 비디오는 "Linetrace_for_gazebo_sim.py"를 동작시킨 것입니다.
+
+linetrace.py is for the contest, So It cant work on general purpose
+linetrace.py는 대회를 위해 하드코딩 되어있는 코드여서 범용적으로 동작하지못합니다.
 
 https://github.com/Carpediem324/nanosaur_robotprogramming/assets/101110020/e20eb1de-4814-4ea4-95f9-7db27b503985
