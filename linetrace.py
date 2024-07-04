@@ -1,3 +1,9 @@
+#this code is for the contest of line tracing
+#and move on the real world
+#So I have to make the code cleary work
+#then I write the hard coding about Motor Control and Turning
+#It is not work on general enviroment
+
 import cv2
 import rclpy
 import time
