@@ -29,7 +29,7 @@ step6: run your node
 
 ### linetrace 코드 설명
 nanosaur가 카메라를 사용하여 선을 따라 이동하는 데 도움이 되도록 하는 라인 팔로워를 구현하기 위한 코드입니다.
-이 코드는 로봇 운영 체제 2(ROS2)를 활용하여 진행되었으며, 필요한 패키지로는 rclpy, sensor_msgs, geometry_msgs, cv2, numpy, 그리고 cv_bridge 등이 활용되었습니다. 
+이 코드는 로봇 운영 체제 2(ROS2)를 활용하여 진행되었으며, 필요한 패키지로는 rclpy, sensor_msgs, geometry_msgs, cv2, numpy, motor, 그리고 cv_bridge 등이 활용되었습니다. 
 
 본 코드의 기능은 다음과 같습니다:
 
